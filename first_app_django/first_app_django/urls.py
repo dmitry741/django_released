@@ -18,4 +18,5 @@ from mainapp.views import *
 
 urlpatterns = [
     url(r'^index$', main),
+    url(r'^about$', about)
 ]
