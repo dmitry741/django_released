@@ -4,7 +4,11 @@
 }
 
 body {
+    background-color: gainsboro;
+}
+
+p {
     font-size: 36px;
     font-weight: 900;
-    background-color: gainsboro;
+    color: red;
 }

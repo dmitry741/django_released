@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>My Django Page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
 </head>
 <body>
 <p>The first project base on Django!!!</p>
 <p>New line</p>
 <p>the second line. Under GitHub</p>
-<p>The third line. {{name}}  - template works!!! </p>
-<p><a href='about'>Обо мне</a></p>
+<p>The third line. {{name}}  - template works!!! CSS works!!!</p>
+<p><a href="about">Обо мне</a></p>
 </body>
 </html>
