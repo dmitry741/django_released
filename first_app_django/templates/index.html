@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-    <h1>{{name}}. {{project}}.</h1>
+    <h1>{{caption}}</h1>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -55,25 +55,30 @@
   <div class="panel-heading">
     <h3 class="panel-title">Образование</h3>
   </div>
-  <div class="panel-body">
-    Образование 133
-  </div>
-  <div class="panel-body">
-    Образование 2
-  </div>
+  {% if edu_list %}
+    {% for edu in edu_list %}
+        <div class="panel-body">
+          {{edu}}
+        </div>
+    {% endfor %}
+  {% else %}
+  Не учился нигде.
+  {% endif %}
 </div>
 
   <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Работа</h3>
   </div>
-  <div class="panel-body">
-    Работа 1ere
+   {% if work_list  %}
+  {% for work in work_list %}
+        <div class="panel-body">
+          {{work}}
+        </div>
+    {% endfor %}
+    {% else %}
+    Нигде не работал пока.
+    {% endif %}
   </div>
-  <div class="panel-body">
-    Работа 2
-  </div>
-</div>
-
   </body>
 </html>
