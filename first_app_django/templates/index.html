@@ -45,11 +45,22 @@
       <ul class="nav navbar-nav">
         <li><a href="#">Образование</a></li>
         <li><a href="#">Работа</a></li>
+        <li><a href="#">Мои проекты</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="row">
+  <div class="col-xs-5 col-md-2">
+    <a href="#" class="thumbnail">
+      <img src='{% static "images/sochi_2016.jpg" %}' alt="photo">
+    </a>
+  </div>
+  my image
+</div>
 
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -80,5 +91,17 @@
     Нигде не работал пока.
     {% endif %}
   </div>
+
+   <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Мои проекты</h3>
+</div>
+    <div class="panel-body">
+      Нахождение минимальный путей на графе. <a href="http://www.orpal.ru">www.orpal.ru</a>
+    </div>
+     <div class="panel-body">
+      Реализация игры Жизнь Джона Конвея. <a href="https://github.com/dmitry741/gamelife_project.git">GitHub</a>
+    </div>
+   </div>
   </body>
 </html>

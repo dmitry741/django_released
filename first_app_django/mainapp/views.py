@@ -8,6 +8,6 @@ def main(request):
 
     my_dict = {'edu_list': edu_list,
                'work_list': work_list,
-               'caption': caption}
+               'caption': caption }
 
     return render_to_response('index.html', my_dict)
