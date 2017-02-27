@@ -6,3 +6,16 @@
 body {
     background-color: white;
 }
+
+.local_container {
+    display: block;
+    float: left;
+    /*background-color:  grey;*/
+    width: 70%;
+
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: black;*/
+
+    margin-left: 60px;
+}

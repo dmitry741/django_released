@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
 
+
 def main(request):
     edu_list = ['Нижегородский универстет им. Лобачевского. Механико-математический факультет.',
                 'Online Geekbrains. Специальность Python разработчик.']
@@ -7,11 +8,15 @@ def main(request):
     first_name = 'павлов'
     second_name = 'дмитрий'
     project_name = 'AboutMe'
+    my_email = 'dmitrypavlov74@gmail.com'
+    page_title = 'AboutMe'
 
     my_dict = {'edu_list': edu_list,
                'work_list': work_list,
                'first_name': first_name,
                'second_name': second_name,
-               'project_name': project_name}
+               'project_name': project_name,
+               'my_email': my_email,
+               'page_title': page_title}
 
     return render_to_response('index.html', my_dict)
