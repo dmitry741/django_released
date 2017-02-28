@@ -20,101 +20,46 @@
     <![endif]-->
 </head>
 <body>
-<div class="local_container">
-    <h1>{{first_name|title}} {{second_name|title}}. {{project_name}} project.</h1>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
+<script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+<div class="header">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Образование</a></li>
-                    <li><a href="#">Работа</a></li>
-                    <li><a href="#">Мои проекты</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+</div>
+<div class="container">
+    <div class="main">
+        <div class="my_title"><h2>Павлов Дмитрий</h2></h2></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Главная</a>
+                </div>
 
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link2</a></li>
+                        <li><a href="#">Link3</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
 
-    <div class="row">
-        <div class="col-xs-5 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src='{% static "images/sochi_2016.jpg" %}' alt="photo">
-            </a>
-        </div>
-        Photo
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Образование</h3>
-        </div>
-        {% if edu_list %}
-        {% for edu in edu_list %}
-        <div class="panel-body">
-            {{edu}}
-        </div>
-        {% endfor %}
-        {% else %}
-        Не учился нигде.
-        {% endif %}
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Работа</h3>
-        </div>
-        {% if work_list %}
-        {% for work in work_list %}
-        <div class="panel-body">
-            {{work}}
-        </div>
-        {% endfor %}
-        {% else %}
-        Нигде не работал пока.
-        {% endif %}
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Мои проекты</h3>
-        </div>
-        <div class="panel-body">
-            Нахождение минимальный путей на графе. <a href="http://www.orpal.ru">www.orpal.ru</a>
-        </div>
-        <div class="panel-body">
-            Реализация игры Жизнь Джона Конвея. <a href="https://github.com/dmitry741/gamelife_project.git">GitHub</a>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Контакты</h3>
-        </div>
-        <div class="panel-body">
-            Email: {{my_email}}
-        </div>
     </div>
 
 </div>
+<div class="footer"></div>
 </body>
 </html>
