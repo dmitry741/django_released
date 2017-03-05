@@ -34,6 +34,11 @@
     border-color: black;
 }
 
+.menu_shift {
+    width: 100px;
+    float: left;
+}
+
 .footer {
     background-color: grey;
 
