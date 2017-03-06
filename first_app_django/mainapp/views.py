@@ -2,21 +2,23 @@ from django.shortcuts import render, render_to_response
 
 
 def main(request):
-    edu_list = ['Нижегородский универстет им. Лобачевского. Механико-математический факультет.',
-                'Online Geekbrains. Специальность Python разработчик.']
-    work_list = ['ЗАО НКТ. Разработчик С++.', 'АО Ридан. Разработчик C#.']
-    first_name = 'павлов'
-    second_name = 'дмитрий'
-    project_name = 'AboutMe'
-    my_email = 'dmitrypavlov74@gmail.com'
-    page_title = 'AboutMe'
 
-    my_dict = {'edu_list': edu_list,
-               'work_list': work_list,
-               'first_name': first_name,
-               'second_name': second_name,
-               'project_name': project_name,
-               'my_email': my_email,
-               'page_title': page_title}
+    page_title = 'AboutMe project'
+    menu_list = ['Резюме', 'Мои проекты', 'Увлечения']
+
+    my_dict = {'page_title': page_title,
+               'menu_list': menu_list}
 
     return render_to_response('index.html', my_dict)
+
+
+def cv(request):
+    return render_to_response('cv.html')
+
+
+def hobbies(request):
+    return render_to_response('hobbies.html')
+
+
+def projects(request):
+    return render_to_response('projects.html')
