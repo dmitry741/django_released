@@ -57,3 +57,21 @@
     border-style: solid;
     border-color: black;
 }
+
+.main_logo {
+    display: block;
+    float: left;
+    width: 170px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+.main_caption {
+    margin-left: 100px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
