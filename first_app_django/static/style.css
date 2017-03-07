@@ -28,6 +28,7 @@
 .footer {
     background-color: grey;
     height: 100px;
+    padding-top: 40px;
 }
 
 .my_title {
@@ -66,6 +67,11 @@
 
     padding-left: 0px;
     padding-top: 0px;
+}
 
+.copy_footer_info {
+    margin: 0 auto;
+    width: 1200px;
 
+    color: white;
 }
