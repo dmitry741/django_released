@@ -35,11 +35,6 @@
     margin-left: 0px;
 
     padding-top: 2px;
-
-    border-width: 2px;
-    border-style: solid;
-    border-color: blue;
-    border-color: darkgrey;
 }
 
 .main_logo {
@@ -47,16 +42,30 @@
 }
 
 .main_caption {
-    margin-left: 140px;
-    padding-top: 20px;
+    margin-left: 120px;
+    padding-top: 30px;
 }
 
-.main_context {
+.main_context1 {
     width: 564px;
     height: 600px;
     float: left;
     margin-left: 20px;
     margin-top: -5px;
+
+    padding-left: 62px;
+    padding-top: 21px;
+}
+
+.main_context2 {
+    width: 564px;
+    height: 600px;
+    float: left;
+    margin-left: 20px;
+    margin-top: -5px;
+
+    padding-left: 0px;
+    padding-top: 0px;
 
     border-width: 2px;
     border-style: solid;
