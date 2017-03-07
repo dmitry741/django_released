@@ -4,7 +4,7 @@ from django.shortcuts import render, render_to_response
 def main(request):
 
     page_title = 'AboutMe project'
-    menu_list = ['Резюме', 'Мои проекты', 'Увлечения']
+    menu_list = ['Резюме', 'Мои проекты', 'Увлечения', 'Контакты']
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}

@@ -7,31 +7,17 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
 }
 
 .header {
     background-color: lightgrey;
-
     height: 200px;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: grey;
 }
 
 .main {
     width: 1200px;
     height: 700px;
-    background-color: white;
     margin-top: 0px;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
 }
 
 .menu_shift {
@@ -41,37 +27,39 @@
 
 .footer {
     background-color: grey;
-
     height: 100px;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: green;
 }
 
 .my_title {
-    margin-top: -124px;
+    margin-top: -156px;
     margin-left: 0px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-
-.main_logo {
-    display: block;
-    float: left;
-    width: 170px;
+    padding-top: 2px;
 
     border-width: 2px;
     border-style: solid;
-    border-color: green;
+    border-color: blue;
+    border-color: darkgrey;
+}
+
+.main_logo {
+    float: left;
 }
 
 .main_caption {
-    margin-left: 100px;
+    margin-left: 140px;
+    padding-top: 20px;
+}
 
-    border-width: 1px;
+.main_context {
+    width: 564px;
+    height: 600px;
+    float: left;
+    margin-left: 20px;
+    margin-top: -5px;
+
+    border-width: 2px;
     border-style: solid;
-    border-color: red;
+    border-color: blue;
+    border-color: darkgrey;
 }
