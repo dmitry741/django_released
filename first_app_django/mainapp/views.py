@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
 
+
 class MyMainMenuItem:
     def __init__(self, menuItem, link):
         self.caption = menuItem
@@ -18,11 +19,14 @@ class MyMainMenuManager:
         self.menuItemList.append(MyMainMenuItem('Контакты', '/contacts'))
 
 
+def get_common_menu_list():
+    menu_manager = MyMainMenuManager()
+    return menu_manager.menuItemList
+
+
 def main(request):
     page_title = 'AboutMe project'
-
-    menu_manager = MyMainMenuManager()
-    menu_list = menu_manager.menuItemList
+    menu_list = get_common_menu_list()
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -32,9 +36,7 @@ def main(request):
 
 def cv(request):
     page_title = 'AboutMe project'
-
-    menu_manager = MyMainMenuManager()
-    menu_list = menu_manager.menuItemList
+    menu_list = get_common_menu_list()
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -44,20 +46,17 @@ def cv(request):
 
 def hobbies(request):
     page_title = 'AboutMe project'
-
-    menu_manager = MyMainMenuManager()
-    menu_list = menu_manager.menuItemList
+    menu_list = get_common_menu_list()
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
+
     return render_to_response('hobbies.html', my_dict)
 
 
 def projects(request):
     page_title = 'AboutMe project'
-
-    menu_manager = MyMainMenuManager()
-    menu_list = menu_manager.menuItemList
+    menu_list = get_common_menu_list()
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -67,9 +66,7 @@ def projects(request):
 
 def contacts(request):
     page_title = 'AboutMe project'
-
-    menu_manager = MyMainMenuManager()
-    menu_list = menu_manager.menuItemList
+    menu_list = get_common_menu_list()
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
