@@ -19,7 +19,6 @@ class MyMainMenuManager:
 
 
 def main(request):
-
     page_title = 'AboutMe project'
 
     menu_manager = MyMainMenuManager()
@@ -32,16 +31,47 @@ def main(request):
 
 
 def cv(request):
-    return render_to_response('cv.html')
+    page_title = 'AboutMe project'
+
+    menu_manager = MyMainMenuManager()
+    menu_list = menu_manager.menuItemList
+
+    my_dict = {'page_title': page_title,
+               'menu_list': menu_list}
+
+    return render_to_response('cv.html', my_dict)
 
 
 def hobbies(request):
-    return render_to_response('hobbies.html')
+    page_title = 'AboutMe project'
+
+    menu_manager = MyMainMenuManager()
+    menu_list = menu_manager.menuItemList
+
+    my_dict = {'page_title': page_title,
+               'menu_list': menu_list}
+    return render_to_response('hobbies.html', my_dict)
 
 
 def projects(request):
-    return render_to_response('projects.html')
+    page_title = 'AboutMe project'
+
+    menu_manager = MyMainMenuManager()
+    menu_list = menu_manager.menuItemList
+
+    my_dict = {'page_title': page_title,
+               'menu_list': menu_list}
+
+    return render_to_response('projects.html', my_dict)
 
 
 def contacts(request):
-    return render_to_response('contacts.html')
+    page_title = 'AboutMe project'
+
+    menu_manager = MyMainMenuManager()
+    menu_list = menu_manager.menuItemList
+
+    my_dict = {'page_title': page_title,
+               'menu_list': menu_list}
+
+    return render_to_response('contacts.html', my_dict)

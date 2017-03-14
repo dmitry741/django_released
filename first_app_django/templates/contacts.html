@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>contacts</title>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{page_title}}</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<h2>contacts</h2>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
+
+<div class="header">
+
+</div>
+<div class="container">
+    <div class="main">
+
+        <div class="my_title">
+
+            <div class="main_logo">
+                <img src='{% static "images/aboutme1.png" %}' alt="About Me image" width="80px">
+            </div>
+            <div class="main_caption">
+                <h2>Персональный сайт / Павлов Дмитрий</h2>
+            </div>
+
+        </div>
+        {% include 'inc_main_menu.html' %}
+        <p>Contacts</p>
+    </div>
+</div>
+<div class="footer">
+    <div class="copy_footer_info">&copy Павлов Дмитрий. Все права защищены. 2017 г.</div>
+</div>
 </body>
 </html>
