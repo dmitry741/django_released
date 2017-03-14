@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +9,6 @@
     <title>{{page_title}}</title>
 
     <!-- Bootstrap -->
-    {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
 
@@ -44,15 +44,7 @@
         </div>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="">Главная</a>
                 </div>
 
@@ -88,16 +80,12 @@
                     quaerat reiciendis, unde veniam. Atque explicabo, facilis ipsam, labore minus molestiae mollitia
                     nostrum perspiciatis qui quibusdam quidem sed!
                 </p>
-                <p>Commodi dolor esse eveniet fuga ipsam itaque labore maxime neque, nisi officiis praesentium tenetur
-                    veniam! Amet dolorem dolores, doloribus ducimus exercitationem id nesciunt quaerat reprehenderit
-                    soluta totam ut vero voluptatum!
-                </p>
             </div>
         </div>
     </div>
 </div>
 <div class="footer">
-<div class="copy_footer_info">&copy Павлов Дмитрий. Все права защищены. 2017 г.</div>
+    <div class="copy_footer_info">&copy Павлов Дмитрий. Все права защищены. 2017 г.</div>
 </div>
 </body>
 </html>
