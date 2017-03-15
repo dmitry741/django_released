@@ -14,10 +14,11 @@ class MyMainMenuItem:
 class MyMainMenuManager:
     def __init__(self, index):
         self.menuItemList = []
-        self.menuItemList.append(MyMainMenuItem('Резюме', '/cv', index == 0))
-        self.menuItemList.append(MyMainMenuItem('Мои проекты', '/projects', index == 1))
-        self.menuItemList.append(MyMainMenuItem('Увлечения', '/hobbies', index == 2))
-        self.menuItemList.append(MyMainMenuItem('Контакты', '/contacts', index == 3))
+        self.menuItemList.append(MyMainMenuItem('Главная', '/', index == len(self.menuItemList)))
+        self.menuItemList.append(MyMainMenuItem('Резюме', '/cv', index == len(self.menuItemList)))
+        self.menuItemList.append(MyMainMenuItem('Мои проекты', '/projects', index == len(self.menuItemList)))
+        self.menuItemList.append(MyMainMenuItem('Увлечения', '/hobbies', index == len(self.menuItemList)))
+        self.menuItemList.append(MyMainMenuItem('Контакты', '/contacts', index == len(self.menuItemList)))
 
 
 def get_common_menu_list(index):
@@ -27,7 +28,7 @@ def get_common_menu_list(index):
 
 def main(request):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(-1)
+    menu_list = get_common_menu_list(0)
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -37,7 +38,7 @@ def main(request):
 
 def cv(request):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(0)
+    menu_list = get_common_menu_list(1)
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -47,7 +48,7 @@ def cv(request):
 
 def projects(request):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(1)
+    menu_list = get_common_menu_list(2)
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -57,7 +58,7 @@ def projects(request):
 
 def hobbies(request):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(2)
+    menu_list = get_common_menu_list(3)
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
@@ -67,7 +68,7 @@ def hobbies(request):
 
 def contacts(request):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(3)
+    menu_list = get_common_menu_list(4)
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list}
