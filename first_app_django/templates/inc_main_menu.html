@@ -9,7 +9,11 @@
             <div class="menu_shift">&nbsp</div>
             <ul class="nav navbar-nav">
                 {% for mi in menu_list %}
-                <li><a href="{{mi.link}}">{{mi.caption}}</a></li>
+                    {% if mi.active %}
+                    <li class="active"><a href="{{mi.link}}">{{mi.caption}}</a></li>
+                    {% else %}
+                    <li><a href="{{mi.link}}">{{mi.caption}}</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div><!-- /.navbar-collapse -->
