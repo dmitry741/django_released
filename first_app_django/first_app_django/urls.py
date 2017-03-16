@@ -18,6 +18,7 @@ from mainapp.views import *
 
 urlpatterns = [
     url(r'^$', main),
+    url(r'^index$', main),
     url(r'^cv$', cv),
     url(r'^hobbies$', hobbies),
     url(r'^projects$', projects),

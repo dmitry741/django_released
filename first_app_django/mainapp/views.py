@@ -6,7 +6,7 @@ def get_mainmenu_captions():
 
 
 def get_mainmenu_links():
-    return ['/', '/cv', '/projects', '/hobbies', '/contacts']
+    return ['index', 'cv', 'projects', 'hobbies', 'contacts']
 
 
 class MyMainMenuItem:
@@ -28,7 +28,7 @@ class MyMainMenuManager:
         count = len(list_caption)
 
         for i in range(count):
-            self.menuItemList.append(MyMainMenuItem(list_caption[i], list_links[i], index == len(self.menuItemList)))
+            self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
 def get_common_menu_list(index):
@@ -36,9 +36,10 @@ def get_common_menu_list(index):
     return menu_manager.menuItemList
 
 
-def get_dict(index):
+def get_response(index):
     page_title = 'AboutMe project'
     menu_list = get_common_menu_list(index)
+    pages = get_mainmenu_links()
     small_caption = get_mainmenu_captions()
     small_caption[0] = None
 
@@ -46,24 +47,24 @@ def get_dict(index):
                'menu_list': menu_list,
                'small_caption': small_caption[index]}
 
-    return my_dict
+    return render_to_response(pages[index] + '.html', my_dict)
 
 
 def main(request):
-    return render_to_response('index.html', get_dict(0))
+    return get_response(0)
 
 
 def cv(request):
-    return render_to_response('cv.html', get_dict(1))
+    return get_response(1)
 
 
 def projects(request):
-    return render_to_response('projects.html', get_dict(2))
+    return get_response(2)
 
 
 def hobbies(request):
-    return render_to_response('hobbies.html', get_dict(3))
+    return get_response(3)
 
 
 def contacts(request):
-    return render_to_response('contacts.html', get_dict(4))
+    return get_response(4)
