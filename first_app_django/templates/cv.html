@@ -37,10 +37,7 @@
             <div class="main_logo">
                 <img src='{% static "images/aboutme1.png" %}' alt="About Me image" width="80px">
             </div>
-            <div class="main_caption">
-                <h2>Персональный сайт / Павлов Дмитрий</h2>
-            </div>
-
+            {% include 'inc_main_caption.html' %}
         </div>
         {% include 'inc_main_menu.html' %}
         <p>CV</p>
