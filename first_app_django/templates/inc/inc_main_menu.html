@@ -3,13 +3,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <div class="menu_shift">&nbsp;</div>
                 {% for mi in menu_list %}
-                    {% if mi.active %}
-                    <li class="active"><a href="{{mi.link}}">{{mi.caption}}</a></li>
-                    {% else %}
-                    <li><a href="{{mi.link}}">{{mi.caption}}</a></li>
-                    {% endif %}
+                {% if mi.active %}
+                <li class="active"><a href="{{mi.link}}">{{mi.caption}}</a></li>
+                {% else %}
+                <li><a href="{{mi.link}}">{{mi.caption}}</a></li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div><!-- /.navbar-collapse -->

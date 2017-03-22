@@ -1,50 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    {% load staticfiles %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{page_title}}</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
-    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doc</title>
 </head>
 <body>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
-
-<div class="header">
-
-</div>
-<div class="container">
-    <div class="main">
-
-        <div class="my_title">
-
-            <div class="main_logo">
-                <img src='{% static "images/aboutme1.png" %}' alt="About Me image" width="80px">
-            </div>
-            {% include 'inc_main_caption.html' %}
-        </div>
-        {% include 'inc_main_menu.html' %}
-        <p>hobbies</p>
-    </div>
-</div>
-<div class="footer">
-    <div class="copy_footer_info">&copy Павлов Дмитрий. Все права защищены. 2017 г.</div>
-</div>
+<h2>hobbies</h2>
 </body>
 </html>

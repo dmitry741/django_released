@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 
 
 def get_mainmenu_captions():
-    return ['Главная', 'Резюме', 'Мои проекты', 'Увлечения', 'Контакты']
+    return ['Главная', 'Резюме', 'Проекты', 'Увлечения', 'Контакты']
 
 
 def get_mainmenu_links():
