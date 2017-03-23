@@ -23,22 +23,24 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 <script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
 
 <div class="container">
     <div class="header">
+        <div class="clr_block1"></div>
         <div class="image_title">
             <img src='{% static "images/aboutme1.png" %}' alt="image about me" width="80px">
         </div>
-        {% include 'inc/inc_main_caption.html' %}
+        <div class="main_caption">
+            {% include 'inc/inc_main_caption.html' %}
+        </div>
         {% include 'inc/inc_main_menu.html' %}
     </div>
     <div class="main">
-        <div class="block"></div>
-        <div class="block"></div>
+        <!--<div class="block"></div>
+        <div class="block"></div>-->
     </div>
-    <div class="clr"></div>
+
 </div>
 <div class="footer"></div>
 </body>

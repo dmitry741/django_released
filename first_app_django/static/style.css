@@ -16,11 +16,21 @@ html, body {
 
 .image_title {
     margin-left: 32px;
-    padding-top: 20px;
+    width: 100px;
+    float: left;
+}
+
+.main_caption {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.clr_block1 {
+    height: 32px;
 }
 
 .container .header {
-    height: 120px;
+    height: 180px;
     background-color: lightgrey;
     min-width: 300px;
 }
@@ -47,10 +57,6 @@ html, body {
     background-color: grey;
     width: 80%;
     margin: -100px auto 0;
-}
-
-.clr {
-    height: 100px;
 }
 
 @media screen and (max-width: 1000px) {
