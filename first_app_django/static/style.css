@@ -62,11 +62,10 @@ html, body {
 
 .footer_copy {
     margin-left: 5%;
-    color: white;
+    color: lightgrey;
 }
 
 @media screen and (max-width: 1000px) {
-
     .block {
         float: none;
         margin: 0 auto;
