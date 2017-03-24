@@ -31,14 +31,10 @@ class MyMainMenuManager:
             self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
-def get_common_menu_list(index):
-    menu_manager = MyMainMenuManager(index)
-    return menu_manager.menuItemList
-
-
 def get_response(index):
     page_title = 'AboutMe project'
-    menu_list = get_common_menu_list(index)
+    menu_manager = MyMainMenuManager(index)
+    menu_list = menu_manager.menuItemList
     pages = get_mainmenu_links()
     small_caption = get_mainmenu_captions()
     small_caption[0] = None
@@ -47,7 +43,7 @@ def get_response(index):
                'menu_list': menu_list,
                'small_caption': small_caption[index] }
 
-    if index == 1:
+    if index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
 
     return render_to_response(pages[index] + '.html', my_dict)
