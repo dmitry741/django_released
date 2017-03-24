@@ -41,6 +41,13 @@ html, body {
     min-height: 500 px;
 }
 
+.container .main_cv {
+    margin-left: 0%;
+    height: 1200px;
+    min-width: 600px;
+    min-height: 500 px;
+}
+
 .block {
     width: 45%;
     float: left;

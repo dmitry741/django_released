@@ -45,7 +45,10 @@ def get_response(index):
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list,
-               'small_caption': small_caption[index]}
+               'small_caption': small_caption[index] }
+
+    if index == 1:
+        my_dict['cv_panel'] = 'panel panel-default'
 
     return render_to_response(pages[index] + '.html', my_dict)
 
