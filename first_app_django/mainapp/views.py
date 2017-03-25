@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 
 
-def get_mainmenu_captions():
+def get_mainsmenu_captions():
     return ['Главная', 'Резюме', 'Проекты', 'Увлечения', 'Контакты']
 
 
@@ -23,7 +23,7 @@ class MyMainMenuManager:
     def __init__(self, index):
         self.menuItemList = []
 
-        list_caption = get_mainmenu_captions()
+        list_caption = get_mainsmenu_captions()
         list_links = get_mainmenu_links()
         count = len(list_caption)
 
@@ -36,7 +36,7 @@ def get_response(index):
     menu_manager = MyMainMenuManager(index)
     menu_list = menu_manager.menuItemList
     pages = get_mainmenu_links()
-    small_caption = get_mainmenu_captions()
+    small_caption = get_mainsmenu_captions()
     small_caption[0] = None
 
     my_dict = {'page_title': page_title,

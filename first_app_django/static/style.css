@@ -29,6 +29,10 @@ html, body {
     height: 32px;
 }
 
+.clr_block_text {
+    height: 12px;
+}
+
 .container .header {
     height: 180px;
     background-color: lightgrey;
@@ -38,14 +42,13 @@ html, body {
 .container .main {
     margin-left: 5%;
     min-width: 600px;
-    min-height: 500 px;
+    min-height: 700px;
 }
 
 .container .main_cv {
     margin-left: 0%;
-    height: 1200px;
+    height: 1300px;
     min-width: 600px;
-    min-height: 500 px;
 }
 
 .block {
