@@ -42,7 +42,8 @@ def get_response(index):
 
     my_dict = {'page_title': page_title,
                'menu_list': menu_list,
-               'small_caption': small_caption[index] }
+               'small_caption': small_caption[index],
+               'cur_year': datetime.strftime(datetime.now(), "%Y")}
 
     if index == 0:  # index
         my_dict['cur_time'] = datetime.strftime(datetime.now(), "%d.%m.%Y")
