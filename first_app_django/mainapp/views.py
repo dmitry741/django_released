@@ -1,4 +1,5 @@
 from django.shortcuts import render, render_to_response
+from datetime import datetime
 
 
 def get_mainsmenu_captions():
@@ -43,7 +44,11 @@ def get_response(index):
                'menu_list': menu_list,
                'small_caption': small_caption[index] }
 
-    if index == 1:  # cv
+    if index == 0:  # index
+        now = datetime.now()
+
+        my_dict['cur_time'] = datetime.strftime(datetime.now(), "%d.%m.%Y")
+    elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
 
     return render_to_response(pages[index] + '.html', my_dict)
