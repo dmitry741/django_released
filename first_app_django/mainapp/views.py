@@ -45,8 +45,6 @@ def get_response(index):
                'small_caption': small_caption[index] }
 
     if index == 0:  # index
-        now = datetime.now()
-
         my_dict['cur_time'] = datetime.strftime(datetime.now(), "%d.%m.%Y")
     elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
