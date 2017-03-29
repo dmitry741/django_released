@@ -10,6 +10,18 @@ def get_mainmenu_links():
     return ['index', 'cv', 'projects', 'hobbies', 'contacts']
 
 
+def skill_list():
+    return ['C#', 'C++', 'Python', 'VB.NET', 'Perl', 'Windows API', 'COM', 'ActiveX', 'GDI+',
+            'OpenGL', 'ASP.NET', 'Django', 'Multi-threading', 'MFC', 'ATL', 'STL', 'Boost',
+            'Nant', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
+
+# Windows API, COM, ActiveX, GDI, GDI+, OpenGL
+# ASP.NET
+# Multi-threading,
+# MFC, ATL, STL, Boost,
+# NAnt (аналог MSBuild),
+# TFS, Git
+
 class MyMainMenuItem:
     def __init__(self, menuItem, link, active):
         self.caption = menuItem
@@ -49,6 +61,7 @@ def get_response(index):
         my_dict['cur_time'] = datetime.strftime(datetime.now(), "%d.%m.%Y")
     elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
+        my_dict['cv_skills'] = skill_list()
 
     return render_to_response(pages[index] + '.html', my_dict)
 
