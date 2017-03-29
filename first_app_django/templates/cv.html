@@ -63,8 +63,8 @@
                     <p>Есть опыт руководства небольшой группой разработчиков и ведения проекта посредством методологии
                         Scrum, успешный опыт реализации цепочек Идея -> ...-> Продажа,
                         участия в полном цикле разработки программного обеспечения от постановки цели, ведения проекта,
-                        написания документации к нему, тестирования до создания инсталляционного пакета.
-                        Профессиональные цели - Работа в ИТ в индустрии. На высоком уровне совмещаю хорошее знание
+                        написания документации, тестирования до создания инсталляционного пакета.
+                        Профессиональные цели - работа в ИТ в индустрии. На высоком уровне совмещаю хорошее знание
                         математики и алгоритмов с высокой программистской культурой.
                     </p>
                     <p>На страничке <a href="/projects">Проекты</a> можно посмотреть некоторые мои разработки.</p>
@@ -147,7 +147,9 @@
                 <p>
                 <h4>
                     {% for s in cv_skills %}
-                    <span class="label label-default">{{s}}</span>
+                    <div class="skill_container">
+                        <span class="label label-default">{{s}}</span>
+                    </div>
                     {% endfor %}
                 </h4>
                 </p>
@@ -169,16 +171,17 @@
 
         <div class="{{cv_panel}}">
             <div class="panel-heading">
-                <h3 class="panel-title">Сертификаты</h3>
+                <h3 class="panel-title">Электронные сертификаты</h3>
             </div>
             <div class="panel-body">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad culpa deserunt distinctio doloribus
-                    eligendi enim eum fuga, magnam minus nam necessitatibus nihil odio officia sapiente sequi soluta
-                    sunt veritatis vero.
-                </div>
+                <p>
+                    <a href="https://geekbrains.ru/certificates/147318">HTML/CSS</a>,&nbsp
+                    <a href="https://geekbrains.ru/certificates/173667">Python</a>,&nbsp
+                    <a href="https://geekbrains.ru/certificates/192835">Django</a>,&nbsp
+                    <a href="https://geekbrains.ru/certificates/125270">Git</a>
+                </p>
             </div>
         </div>
-
     </div>
 
 </div>

@@ -12,15 +12,9 @@ def get_mainmenu_links():
 
 def skill_list():
     return ['C#', 'C++', 'Python', 'VB.NET', 'Perl', 'Windows API', 'COM', 'ActiveX', 'GDI+',
-            'OpenGL', 'ASP.NET', 'Django', 'Multi-threading', 'MFC', 'ATL', 'STL', 'Boost',
-            'Nant', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
+            'OpenGL', 'ASP.NET', 'Django', 'HTML', 'CSS', 'Bootstrap', 'Multi-threading', 'MFC', 'ATL', 'STL', 'Boost',
+            'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
 
-# Windows API, COM, ActiveX, GDI, GDI+, OpenGL
-# ASP.NET
-# Multi-threading,
-# MFC, ATL, STL, Boost,
-# NAnt (аналог MSBuild),
-# TFS, Git
 
 class MyMainMenuItem:
     def __init__(self, menuItem, link, active):
