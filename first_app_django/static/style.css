@@ -42,12 +42,12 @@ html, body {
 .container .main {
     margin-left: 5%;
     min-width: 600px;
-    min-height: 700px;
+    min-height: 800px;
 }
 
 .container .main_cv {
     margin-left: 0%;
-    height: 1700px;
+    height: 1900px;
     min-width: 600px;
 }
 
