@@ -16,6 +16,12 @@ def skill_list():
             'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
 
 
+def myage():
+    # now_date = datetime.today()
+    # bd = datetime.date()
+    # t = now_date - bd
+    return '43 года'
+
 class MyMainMenuItem:
     def __init__(self, menuItem, link, active):
         self.caption = menuItem
@@ -56,6 +62,7 @@ def get_response(index):
     elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
         my_dict['cv_skills'] = skill_list()
+        my_dict['age'] = myage()
 
     return render_to_response(pages[index] + '.html', my_dict)
 
