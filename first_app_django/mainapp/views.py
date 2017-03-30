@@ -31,7 +31,6 @@ def get_age(_year, _month, _day):
 
 def get_string_age(_year, _month, _day):
     age = get_age(_year, _month, _day)
-    string = ''
 
     if age in range(11, 20):
         string = 'лет'
@@ -43,6 +42,15 @@ def get_string_age(_year, _month, _day):
         string = 'года'
 
     return ' '.join([str(age), string])
+
+def get_string_cur_date():
+    months = {1: 'Января', 2: 'Февраля', 3: 'Марта',
+              4: 'Апреля', 5: 'Мая', 6: 'Июня',
+              7: 'Июля', 8: 'Августа', 9: 'сентября',
+              10: 'октября ', 11: 'Ноября', 12: 'Декабря'}
+    cur_date = datetime.datetime.now()
+
+    return ' '.join([str(cur_date.day), months[cur_date.month], str(cur_date.year)])
 
 
 class MyMainMenuItem:
@@ -81,7 +89,7 @@ def get_response(index):
                'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
 
     if index == 0:  # index
-        my_dict['cur_time'] = datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
+        my_dict['cur_time'] = get_string_cur_date()  #  datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
     elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
         my_dict['cv_skills'] = skill_list()
