@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from datetime import datetime
+import datetime
 
 
 def get_mainsmenu_captions():
@@ -16,11 +16,34 @@ def skill_list():
             'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
 
 
-def myage():
-    # now_date = datetime.today()
-    # bd = datetime.date()
-    # t = now_date - bd
-    return '43 года'
+def get_age(_year, _month, _day):
+    cur_time = datetime.date.today()
+    my_hbd = datetime.date(_year, _month, _day)
+
+    age = cur_time.year - my_hbd.year
+    dt = datetime.date(year=cur_time.year, month=_month, day=_day)
+
+    if dt > cur_time:
+        age -= 1
+
+    return age
+
+
+def get_string_age(_year, _month, _day):
+    age = get_age(_year, _month, _day)
+    string = ''
+
+    if age in range(11, 20):
+        string = 'лет'
+    elif age % 10 in (0, 5, 6, 7, 8, 9):
+        string = 'лет'
+    elif age % 10 == 1:
+        string = 'год'
+    else:
+        string = 'года'
+
+    return ' '.join([str(age), string])
+
 
 class MyMainMenuItem:
     def __init__(self, menuItem, link, active):
@@ -55,14 +78,14 @@ def get_response(index):
     my_dict = {'page_title': page_title,
                'menu_list': menu_list,
                'small_caption': small_caption[index],
-               'cur_year': datetime.strftime(datetime.now(), "%Y")}
+               'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
 
     if index == 0:  # index
-        my_dict['cur_time'] = datetime.strftime(datetime.now(), "%d.%m.%Y")
+        my_dict['cur_time'] = datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
     elif index == 1:  # cv
         my_dict['cv_panel'] = 'panel panel-default'
         my_dict['cv_skills'] = skill_list()
-        my_dict['age'] = myage()
+        my_dict['age'] = get_string_age(1974, 2, 6)
 
     return render_to_response(pages[index] + '.html', my_dict)
 
