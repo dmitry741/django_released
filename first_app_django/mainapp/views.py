@@ -55,8 +55,11 @@ def get_string_cur_date():
               7: 'Июля', 8: 'Августа', 9: 'сентября',
               10: 'октября ', 11: 'Ноября', 12: 'Декабря'}
     cur_date = datetime.datetime.now()
+    day_of_weak = cur_date.isoweekday()
 
-    return ' '.join([str(cur_date.day), months[cur_date.month], str(cur_date.year)])
+    weaks = {1: 'Понедельник', 2: 'Вторник', 3: 'Среда', 4: 'Четверг', 5: 'Пятница', 6: 'Суббота', 7: 'Воскресенье'}
+
+    return ' '.join([weaks[day_of_weak] + ',', str(cur_date.day), months[cur_date.month], str(cur_date.year)])
 
 
 class MyMainMenuItem:
