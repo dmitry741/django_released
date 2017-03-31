@@ -16,9 +16,9 @@ def skill_list():
             'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql')
 
 
-def get_cv_items():
-    return ('Синопсис', 'Образование', 'Опыт', 'Языки программирования', 'IDE', 'Технологии', 'Иностранные языки',
-            'Электронные сертификаты')
+# def get_cv_items():
+#     return ('Синопсис', 'Образование', 'Опыт', 'Языки программирования', 'IDE', 'Технологии', 'Иностранные языки',
+#             'Электронные сертификаты')
 
 
 def get_age(_year, _month, _day):
@@ -81,54 +81,65 @@ class MyMainMenuManager:
             self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
-def get_response(index):
+def get_common_dict(index):
     page_title = 'AboutMe project'
     menu_manager = MyMainMenuManager(index)
     menu_list = menu_manager.menuItemList
-    pages = get_mainmenu_links()
     small_caption = get_mainsmenu_captions()
     small_caption[0] = None
 
-    my_dict = {'page_title': page_title,
-               'menu_list': menu_list,
-               'small_caption': small_caption[index],
-               'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
+    d = {'page_title': page_title,
+         'menu_list': menu_list,
+         'small_caption': small_caption[index],
+         'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
 
-    if index == 0:  # index
-        my_dict['cur_time'] = get_string_cur_date()  #  datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
-    elif index == 1:  # cv
-        my_dict['cv_panel'] = 'panel panel-default'
-        my_dict['cv_skills'] = skill_list()
-        my_dict['age'] = get_string_age(1974, 2, 6)
-
-        # cv_items = get_cv_items()
-        #
-        # my_dict['cv_synopsis'] = cv_items(0)
-        # my_dict['cv_edu'] = cv_items(1)
-        # my_dict['cv_xp'] = cv_items(2)
-        # my_dict['cv_lang'] = cv_items(3)
-        # my_dict['cv_ide'] = cv_items(4)
-        # my_dict['cv_tech'] = cv_items(5)
-        # my_dict['cv_'] = cv_items(1)
-
-    return render_to_response(pages[index] + '.html', my_dict)
+    return d
 
 
 def main(request):
-    return get_response(0)
+    index = 0
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+    d['cur_time'] = get_string_cur_date()  # datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
+
+    return render_to_response(pages[index] + '.html', d)
 
 
 def cv(request):
-    return get_response(1)
+    index = 1
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+    d['cv_panel'] = 'panel panel-default'
+    d['cv_skills'] = skill_list()
+    d['cv_age'] = get_string_age(1974, 2, 6)
+
+    return render_to_response(pages[index] + '.html', d)
 
 
 def projects(request):
-    return get_response(2)
+    index = 2
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+
+    return render_to_response(pages[index] + '.html', d)
 
 
 def hobbies(request):
-    return get_response(3)
+    index = 3
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+
+    return render_to_response(pages[index] + '.html', d)
 
 
 def contacts(request):
-    return get_response(4)
+    index = 4
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+
+    return render_to_response(pages[index] + '.html', d)
