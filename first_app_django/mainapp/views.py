@@ -11,9 +11,14 @@ def get_mainmenu_links():
 
 
 def skill_list():
-    return ['C#', 'C++', 'Python', 'VB.NET', 'Perl', 'Windows API', 'COM', 'ActiveX', 'GDI+',
+    return ('C#', 'C++', 'Python', 'VB.NET', 'Perl', 'Windows API', 'COM', 'ActiveX', 'GDI+',
             'OpenGL', 'ASP.NET', 'Django', 'HTML', 'CSS', 'Bootstrap', 'Multi-threading', 'MFC', 'ATL', 'STL', 'Boost',
-            'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql']
+            'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql')
+
+
+def get_cv_items():
+    return ('Синопсис', 'Образование', 'Опыт', 'Языки программирования', 'IDE', 'Технологии', 'Иностранные языки',
+            'Электронные сертификаты')
 
 
 def get_age(_year, _month, _day):
@@ -42,6 +47,7 @@ def get_string_age(_year, _month, _day):
         string = 'года'
 
     return ' '.join([str(age), string])
+
 
 def get_string_cur_date():
     months = {1: 'Января', 2: 'Февраля', 3: 'Марта',
@@ -94,6 +100,16 @@ def get_response(index):
         my_dict['cv_panel'] = 'panel panel-default'
         my_dict['cv_skills'] = skill_list()
         my_dict['age'] = get_string_age(1974, 2, 6)
+
+        # cv_items = get_cv_items()
+        #
+        # my_dict['cv_synopsis'] = cv_items(0)
+        # my_dict['cv_edu'] = cv_items(1)
+        # my_dict['cv_xp'] = cv_items(2)
+        # my_dict['cv_lang'] = cv_items(3)
+        # my_dict['cv_ide'] = cv_items(4)
+        # my_dict['cv_tech'] = cv_items(5)
+        # my_dict['cv_'] = cv_items(1)
 
     return render_to_response(pages[index] + '.html', my_dict)
 
