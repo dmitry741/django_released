@@ -143,8 +143,6 @@
             </div>
             <div class="panel-body">
                 <p>Технологии с которыми реально работал:</p>
-
-                <p>
                 <h4>
                     {% for s in cv_skills %}
                     <div class="skill_container">
@@ -152,7 +150,6 @@
                     </div>
                     {% endfor %}
                 </h4>
-                </p>
             </div>
         </div>
 
@@ -183,7 +180,10 @@
                 </p>
             </div>
         </div>
-        <p><a class="btn btn-primary" href="#" role="button">Наверх</a></p>
+        <p>
+            <a class="btn btn-primary" href="#" role="button">Наверх</a>
+            <a class="btn btn-primary" href="/contacts" role="button">Написать сообщение</a>
+        </p>
     </div>
 </div>
 {% include 'inc/inc_common_footer.html' %}
