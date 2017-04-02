@@ -45,6 +45,15 @@ html, body {
     min-height: 800px;
 }
 
+.container .main_hb {
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 600px;
+    min-height: 800px;
+
+    border: 1px solid green;
+}
+
 .container .main_cv {
     min-height: 2100px;
     min-width: 600px;
