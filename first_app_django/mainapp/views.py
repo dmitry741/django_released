@@ -135,7 +135,9 @@ def hobbies(request):
     pages = get_mainmenu_links()
 
     d = get_common_dict(index)
-    d['hobby_test'] = 'My hobby test Su-24'
+    d['hobby_caption'] = 'Модель Су-24, фронтовой бомбардировщик'
+    d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
+    d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
 
     return render_to_response(pages[index] + '.html', d)
 
