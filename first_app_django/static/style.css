@@ -91,6 +91,7 @@ html, body {
 .context_template_container {
 
     min-height: 520px;
+    padding-right: 30px;
 
 }
 

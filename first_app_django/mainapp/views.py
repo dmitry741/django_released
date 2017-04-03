@@ -135,6 +135,7 @@ def hobbies(request):
     pages = get_mainmenu_links()
 
     d = get_common_dict(index)
+    d['hobby_test'] = 'My hobby test Su-24'
 
     return render_to_response(pages[index] + '.html', d)
 
