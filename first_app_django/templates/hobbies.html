@@ -81,35 +81,17 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-6 col-md-1">
-                <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/1.jpg" %}' alt="...">
-                </a>
-            </div>
 
+            {% for s in image_list %}
             <div class="col-xs-6 col-md-1">
                 <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/2.jpg" %}' alt="...">
+                    <img src='{% static "images/hobbies/su24/1.jpg" %}' alt="photo">
                 </a>
             </div>
-
-            <div class="col-xs-6 col-md-1">
-                <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/3.jpg" %}' alt="...">
-                </a>
-            </div>
-
-            <div class="col-xs-6 col-md-1">
-                <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/4.jpg" %}' alt="...">
-                </a>
-            </div>
-
-            <div class="col-xs-6 col-md-1">
-                <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/5.jpg" %}' alt="...">
-                </a>
-            </div>
+            <!--<p>-->
+                <!--{{s.item1}}/{{s.item2}}-->
+            <!--</p>-->
+            {% endfor %}
 
         </div>
     </div>

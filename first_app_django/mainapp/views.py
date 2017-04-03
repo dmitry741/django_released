@@ -84,6 +84,12 @@ class MyMainMenuManager:
             self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
+class StringTemplate:
+    def __init__(self, item1, item2):
+        self.item1 = item1
+        self.item2 = item2
+
+
 def get_common_dict(index):
     page_title = 'AboutMe project'
     menu_manager = MyMainMenuManager(index)
@@ -138,6 +144,15 @@ def hobbies(request):
     d['hobby_caption'] = 'Модель Су-24, фронтовой бомбардировщик'
     d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
     d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
+
+    image_list = []
+
+    for x in range(5):
+        # {% static "images/hobbies/su24/3.jpg" %}
+        #st = StringTemplate('hobbies/su24', str(x + 1) + '.jpg')
+        image_list.append('{% static "images/hobbies/su24/1.jpg" %}')
+
+    d['image_list'] = image_list
 
     return render_to_response(pages[index] + '.html', d)
 
