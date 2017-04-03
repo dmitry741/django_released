@@ -48,10 +48,12 @@ html, body {
 .container .main_hb {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 1%;
+
     min-width: 600px;
     min-height: 800px;
 
-    border: 1px solid green;
+
 }
 
 .container .main_cv {
@@ -73,6 +75,23 @@ html, body {
 .skill_container {
     margin: 4px 4px;
     float: left;
+}
+
+.image_template_container {
+    width: 60%;
+
+    float: left;
+
+    padding-left: 2%;
+    padding-top: 2%;
+
+    min-height: 520px;
+}
+
+.context_template_container {
+
+    min-height: 520px;
+
 }
 
 .footer {
