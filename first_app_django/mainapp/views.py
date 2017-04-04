@@ -148,11 +148,12 @@ def hobbies(request):
     image_list = []
 
     for x in range(5):
-        # {% static "images/hobbies/su24/3.jpg" %}
-        #st = StringTemplate('hobbies/su24', str(x + 1) + '.jpg')
-        image_list.append('static/images/hobbies/su24/' + str(x + 1) + '.jpg')
+        str_n = str(x + 1)
+        s = StringTemplate('static/images/hobbies/su24/' + str_n + '.jpg', 'photo' + str_n)
+        s.link = '#'
+        image_list.append(s)
 
-    d['hobby_image_list'] = image_list
+    d['image_list'] = image_list
 
     return render_to_response(pages[index] + '.html', d)
 
