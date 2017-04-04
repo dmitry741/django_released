@@ -67,11 +67,7 @@
                     ipsum laudantium molestiae nam natus necessitatibus officia placeat quam quisquam quos rem
                     repudiandae soluta sunt unde.
                 </p>
-                <p>Ad adipisci alias aliquam, cum cumque dicta dignissimos dolorem enim eos expedita illum incidunt
-                    ipsum laudantium molestiae nam natus necessitatibus officia placeat quam quisquam quos rem
-                    repudiandae soluta sunt unde.
-                </p>
-                <br>
+
                 <br>
                 <a class="btn btn-primary" href="{{hobby_link_to_wiki}}" target="_blank" role="button">
                     {{hobby_button_to_wiki}}
@@ -82,15 +78,13 @@
 
         <div class="row">
 
-            {% for s in image_list %}
+            {% for s in hobby_image_list %}
             <div class="col-xs-6 col-md-1">
                 <a href="#" class="thumbnail">
-                    <img src='{% static "images/hobbies/su24/1.jpg" %}' alt="photo">
+                    <img src={{s}} alt="photo">
                 </a>
             </div>
-            <!--<p>-->
-                <!--{{s.item1}}/{{s.item2}}-->
-            <!--</p>-->
+
             {% endfor %}
 
         </div>
