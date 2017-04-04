@@ -78,13 +78,12 @@
 
         <div class="row">
 
-            {% for s in hobby_image_list %}
+            {% for s in image_list %}
             <div class="col-xs-6 col-md-1">
-                <a href="#" class="thumbnail">
-                    <img src={{s}} alt="photo">
+                <a href="{{s.link}}" class="thumbnail">
+                    <img src="{{s.item1}}" alt="{{s.item2}}">
                 </a>
             </div>
-
             {% endfor %}
 
         </div>
