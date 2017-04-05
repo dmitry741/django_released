@@ -150,7 +150,7 @@ def hobbies(request):
     for x in range(5):
         str_n = str(x + 1)
         s = StringTemplate('static/images/hobbies/su24/' + str_n + '.jpg', 'photo' + str_n)
-        s.link = '/hobbies'
+        s.link = '#'
         image_list.append(s)
 
     d['image_list'] = image_list

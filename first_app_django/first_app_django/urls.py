@@ -18,12 +18,12 @@ from mainapp.views import *
 
 urlpatterns = [
     url(r'^$', main),
-    url(r'^index$', main),
+    url(r'^index[|/]$', main),
 ]
 
 urlpatterns += [
-    url(r'^cv$', cv),
-    url(r'^hobbies$', hobbies),
-    url(r'^projects$', projects),
-    url(r'^contacts$', contacts)
+    url(r'^cv[|/]$', cv),
+    url(r'^contacts[|/]$', contacts),
+    url(r'^hobbies[|/]$', hobbies),
+    url(r'^projects[|/]$', projects),
 ]
