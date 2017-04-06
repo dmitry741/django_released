@@ -154,7 +154,7 @@ def hobbies(request):
         p = request.GET.get('page')
 
         if p is not None:
-            if p in ['1', '2', '3', '4', '5']:
+            if p in [str(x + 1) for x in range(5)]:
                 d['hobby_cur_image'] = path + p + '.jpg'
 
     image_list = []
