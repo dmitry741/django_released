@@ -141,10 +141,13 @@ def hobbies(request):
     pages = get_mainmenu_links()
 
     d = get_common_dict(index)
+
+    path = '/static/images/hobbies/su24/'
+
     d['hobby_caption'] = 'Модель Су-24, фронтовой бомбардировщик'
     d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
     d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
-    d['hobby_cur_image'] = '/static/images/hobbies/su24/1.jpg'
+    d['hobby_cur_image'] = path + '1.jpg'
     d['debug_value'] = '0'
 
     if request.method == 'GET':
@@ -152,14 +155,14 @@ def hobbies(request):
 
         if p is not None:
             if p in ['1', '2', '3', '4', '5']:
-                d['hobby_cur_image'] = '/static/images/hobbies/su24/' + p + '.jpg'
+                d['hobby_cur_image'] = path + p + '.jpg'
 
     image_list = []
 
     for x in range(5):
         str_n = str(x + 1)
-        s = StringTemplate('/static/images/hobbies/su24/' + str_n + '.jpg', 'photo' + str_n)
-        s.link = '/hobbies?page=' + str_n
+        s = StringTemplate(path + str_n + '.jpg', 'photo' + str_n)
+        s.link = '/hobbies/?page=' + str_n
         image_list.append(s)
 
     d['image_list'] = image_list
