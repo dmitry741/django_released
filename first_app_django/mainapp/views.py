@@ -89,6 +89,9 @@ class StringTemplate:
         self.item1 = item1
         self.item2 = item2
 
+    def __str__(self):
+        return self.item1
+
 
 def get_common_dict(index):
     page_title = 'AboutMe project'
@@ -148,6 +151,7 @@ def hobbies(request):
     d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
     d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
     d['hobby_cur_image'] = path + '1.jpg'
+    d['hobby_list_models'] = [StringTemplate('Су-24', 'primary'), StringTemplate('Су-37', 'default')]
 
     request.session['fav_color'] = 'value from the current session'
 

@@ -39,8 +39,9 @@
     <div class="main_hb">
 
         <div class="btn-group" role="group" aria-label="models">
-            <button type="button" class="btn btn-primary">Су-24</button>
-            <button type="button" class="btn btn-default">Су-37</button>
+            {% for s in hobby_list_models %}
+            <button type="button" class="btn btn-{{s.item2}}">{{s.item1}}</button>
+            {% endfor %}
         </div>
 
         <div class="clr_block_text"></div>
