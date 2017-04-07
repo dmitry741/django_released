@@ -148,14 +148,18 @@ def hobbies(request):
     d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
     d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
     d['hobby_cur_image'] = path + '1.jpg'
-    d['debug_value'] = '0'
+
+    request.session['fav_color'] = 'value from the current session'
 
     if request.method == 'GET':
         p = request.GET.get('page')
 
         if p is not None:
             if p in [str(x + 1) for x in range(5)]:
+                request.session['fav_color'] = p
                 d['hobby_cur_image'] = path + p + '.jpg'
+
+    d['debug_value'] = request.session['fav_color']
 
     image_list = []
 
