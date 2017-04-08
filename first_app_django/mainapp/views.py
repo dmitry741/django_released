@@ -168,10 +168,34 @@ def hobbies(request):
     d['hobby_cur_image'] = path + '1.jpg'
     d['hobby_list_models'] = [StringTemplate('Су-24', 'primary'), StringTemplate('Су-37', 'default')]
 
-
-
     if request.method == 'GET':
         p = request.GET.get('page')
+        model = request.GET.get('model')
+
+        if model is None:
+            model_n = 1
+            MySession.set_hobby_index(request, model_n)
+
+            s1 = StringTemplate('Су-24', 'primary')
+            s2 = StringTemplate('Су-37', 'default')
+
+            d['hobby_list_models'] = [s1, s2]
+        elif model in [str(m + 1) for m in range(2)]:
+            model_n = int(model)
+            MySession.set_hobby_index(request, model_n)
+
+            st1 = StringTemplate('Су-24', 'primary' if model_n == 1 else 'default')
+            st2 = StringTemplate('Су-37', 'primary' if model_n == 2 else 'default')
+
+            d['hobby_list_models'] = [st1, st2]
+        else:
+            model_n = 1
+            MySession.set_hobby_index(request, model_n)
+
+            st1 = StringTemplate('Су-24', 'primary')
+            st2 = StringTemplate('Су-37', 'default')
+
+            d['hobby_list_models'] = [st1, st2]
 
         if p is not None:
             if p in [str(x + 1) for x in range(5)]:
