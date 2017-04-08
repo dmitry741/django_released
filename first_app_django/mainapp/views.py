@@ -93,6 +93,21 @@ class StringTemplate:
         return self.item1
 
 
+class MySession:
+
+    @staticmethod
+    def get_hobby_index(request):
+        x = request.session.get('hobby_index')
+        if x is None:
+            request.session['hobby_index'] = 1
+
+        return request.session['hobby_index']
+
+    @staticmethod
+    def set_hobby_index(request, val):
+        request.session['hobby_index'] = val
+
+
 def get_common_dict(index):
     page_title = 'AboutMe project'
     menu_manager = MyMainMenuManager(index)
@@ -113,7 +128,7 @@ def main(request):
     pages = get_mainmenu_links()
 
     d = get_common_dict(index)
-    d['cur_time'] = get_string_cur_date()  # datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
+    d['cur_time'] = get_string_cur_date()
 
     return render_to_response(pages[index] + '.html', d)
 
@@ -153,17 +168,17 @@ def hobbies(request):
     d['hobby_cur_image'] = path + '1.jpg'
     d['hobby_list_models'] = [StringTemplate('Су-24', 'primary'), StringTemplate('Су-37', 'default')]
 
-    request.session['fav_color'] = 'value from the current session'
+
 
     if request.method == 'GET':
         p = request.GET.get('page')
 
         if p is not None:
             if p in [str(x + 1) for x in range(5)]:
-                request.session['fav_color'] = p
+                MySession.set_hobby_index(request, p)
                 d['hobby_cur_image'] = path + p + '.jpg'
 
-    d['debug_value'] = request.session['fav_color']
+    d['debug_value'] = MySession.get_hobby_index(request)
 
     image_list = []
 
