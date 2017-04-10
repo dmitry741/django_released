@@ -51,6 +51,7 @@ html, body {
     margin-top: 1%;
 
     min-width: 600px;
+
     min-height: 800px;
 }
 
@@ -82,12 +83,12 @@ html, body {
     padding-left: 2%;
     padding-top: 2%;
 
-    min-height: 420px;
+    min-height: 480px;
 }
 
 .context_template_container {
     padding-right: 30px;
-    min-height: 420px;
+    min-height: 480px;
 }
 
 .footer {

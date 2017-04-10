@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
 import datetime
+from mainapp.hobbystructure import MyHobbyStructure
 
 
 def get_mainsmenu_captions():
@@ -157,6 +158,8 @@ def projects(request):
 def hobbies(request):
     index = 3
     pages = get_mainmenu_links()
+
+    hb = MyHobbyStructure('name')
 
     d = get_common_dict(index)
 
