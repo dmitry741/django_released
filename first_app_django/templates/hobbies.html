@@ -38,55 +38,48 @@
     </div>
     <div class="main_hb">
 
-        <div class="btn-group" role="group" aria-label="models">
+        <ul class="nav nav-pills">
             {% for s in hobby_list_models %}
-            <button type="button" class="btn btn-{{s.item2}}">{{s.item1}}</button>
+            <li role="presentation" class="default"><a href="#"><b>{{s}}</b></a></li>
             {% endfor %}
-        </div>
+        </ul>
 
         <div class="clr_block_text"></div>
 
         <div class="panel panel-default">
             <div class="panel-body">
-                <b>{{hobby_caption}}</b>
+                <b>Модель {{model.name}}, {{model.shortdesc}}</b>
             </div>
 
             <div class="image_template_container">
                 <div class="row">
                     <div class="col-xs-6 col-md-9">
                         <div class="thumbnail">
-                            <img src='{{hobby_cur_image}}' alt="su-24">
+                            <img src='{{model.mainimagesrc}}' alt="{{model.name}}">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="context_template_container">
                 <h4>Описание</h4>
-                <p>Су-24 (изделие Т-6, по кодификации НАТО: Fencer — «Фехтовальщик») —
-                    советский и российский тактический фронтовой бомбардировщик с крылом изменяемой
-                    стреловидности, предназначенный для нанесения ракетно-бомбовых ударов в простых и сложных
-                    метеоусловиях, днём и ночью, в том числе на малых высотах с прицельным поражением наземных
-                    и надводных целей.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque laudantium nobis omnis
-                    quaerat soluta sunt voluptatem! Earum eveniet inventore, ipsa libero non nostrum odio provident quam
-                    quas recusandae sapiente?
-                </p>
+                {% for s in model.desc %}
+                <p>{{s}}</p>
+                {% endfor %}
 
                 <b>{{debug_value}}</b>
                 <br>
-                <a class="btn btn-default" href="{{hobby_link_to_wiki}}" target="_blank" role="button">
-                    {{hobby_button_to_wiki}}
+                <a class="btn btn-default" href="{{model.buttonlink}}" target="_blank" role="button">
+                    {{model.buttonname}}
                 </a>
             </div>
 
         </div>
 
         <div class="row">
-            {% for s in image_list %}
+            {% for s in model.smallimages %}
             <div class="col-xs-6 col-md-1">
-                <a href="{{s.link}}" class="thumbnail">
-                    <img src='{{s.item1}}' alt="{{s.item2}}">
+                <a href="{{s.item2}}" class="thumbnail">
+                    <img src='{{s.item1}}' alt="small photo">
                 </a>
             </div>
             {% endfor %}

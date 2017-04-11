@@ -3,22 +3,38 @@ class MyHobbyStructure:
         self.name = caption
         self.shortdesc = ''
         self.desc = []
+
         self.buttonname = self.name + ' на Википедии'
         self.buttonlink = ''
 
         self.mainimagesrc = ''
-
-        self.smallimagesrc = []
-        self.smallimagelink = []
-
+        self.smallimages = []
 
     def __str__(self):
         return self.name
 
 
+class StringTemplate:
+    def __init__(self, item1, item2):
+        self.item1 = item1
+        self.item2 = item2
+
+    def __str__(self):
+        return self.item1
+
+
 def get_model_captions():
     return ['Су-24', 'Су-37']
 
+
+def get_path_to_static(index):
+
+    if index == 0:
+        path = '/static/images/hobbies/su24/'
+    else:
+        path = '/static/images/hobbies/su37/'
+
+    return path
 
 def get_model(index):
 
@@ -36,33 +52,27 @@ def get_model(index):
                        модернизируют и совершенствуют, ведь ее качества актуальны и на сегодняшний день.''',
                        'Самолет хорошо себя зарекомендовала во время боевой опреации в Сирии.']
         model.buttonlink = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
-
-        path = '/static/images/hobbies/su24/'
-
     elif index == 1:
-        model.shortdesc = 'фронтовой бомбардировщик'
+        model.shortdesc = 'экспериментальный сверхманевренный истребитель'
         model.desc = ['''Су-37 (по кодификации НАТО: Flanker-F) — российский экспериментальный сверхманевренный истребитель
                       четвёртого поколения с передним горизонтальным оперением (ПГО) и двигателями с УВТ. Создан на
                       базе истребителя Су-27М.''',
-                      '''Су 37 демонстрировал технологию управления вектором тяги, которую предполагалось использовать
+                      '''Самолет имеет технологию управляемого вектора тяги, которую предполагалось использовать
                       на новых машинах семейства Сухого. Отработанные на нём решения легли в основу создания самолётов
                       пятого поколения.''']
         model.buttonlink = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-37'
 
-        path = '/static/images/hobbies/su37/'
-
+    path = get_path_to_static(index)
     model.mainimagesrc = path + '1.jpg'
 
-    imagesrc = []
-    imagelinks = []
+    small_images = []
 
     for x in range(5):
         str_x = str(x + 1)
-        imagesrc.append(path + str_x + '.jpg')
-        imagelinks.append('/hobbies/?page=' + str_x)
+        si = StringTemplate(path + str_x + '.jpg', '/hobbies/?page=' + str_x)
+        small_images.append(si)
 
-    model.smallimagesrc = imagesrc
-    model.smallimagelink = imagelinks
+    model.smallimages = small_images
 
     return model
 

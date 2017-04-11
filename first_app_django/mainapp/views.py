@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 import datetime
-from mainapp.hobbystructure import MyHobbyStructure
+from mainapp.hobbystructure import MyHobbyStructure, get_model, get_model_captions, get_path_to_static
 
 
 def get_mainsmenu_captions():
@@ -85,22 +85,13 @@ class MyMainMenuManager:
             self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
-class StringTemplate:
-    def __init__(self, item1, item2):
-        self.item1 = item1
-        self.item2 = item2
-
-    def __str__(self):
-        return self.item1
-
-
 class MySession:
 
     @staticmethod
     def get_hobby_index(request):
         x = request.session.get('hobby_index')
         if x is None:
-            request.session['hobby_index'] = 1
+            request.session['hobby_index'] = 0
 
         return request.session['hobby_index']
 
@@ -159,63 +150,24 @@ def hobbies(request):
     index = 3
     pages = get_mainmenu_links()
 
-    hb = MyHobbyStructure('name')
+    model_index = MySession.get_hobby_index(request)
 
     d = get_common_dict(index)
+    d['hobby_list_models'] = get_model_captions()
 
-    path = '/static/images/hobbies/su24/'
-
-    d['hobby_caption'] = 'Модель Су-24, фронтовой бомбардировщик'
-    d['hobby_link_to_wiki'] = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
-    d['hobby_button_to_wiki'] = 'Су-24 на Википедии'
-    d['hobby_cur_image'] = path + '1.jpg'
-    d['hobby_list_models'] = [StringTemplate('Су-24', 'primary'), StringTemplate('Су-37', 'default')]
+    p = '1'
 
     if request.method == 'GET':
         p = request.GET.get('page')
-        model = request.GET.get('model')
 
-        if model is None:
-            model_n = 1
-            MySession.set_hobby_index(request, model_n)
+        if p is None:
+            p = '1'
+        elif not p in [str(x + 1) for x in range(5)]:
+            p = '1'
 
-            s1 = StringTemplate('Су-24', 'primary')
-            s2 = StringTemplate('Су-37', 'default')
-
-            d['hobby_list_models'] = [s1, s2]
-        elif model in [str(m + 1) for m in range(2)]:
-            model_n = int(model)
-            MySession.set_hobby_index(request, model_n)
-
-            st1 = StringTemplate('Су-24', 'primary' if model_n == 1 else 'default')
-            st2 = StringTemplate('Су-37', 'primary' if model_n == 2 else 'default')
-
-            d['hobby_list_models'] = [st1, st2]
-        else:
-            model_n = 1
-            MySession.set_hobby_index(request, model_n)
-
-            st1 = StringTemplate('Су-24', 'primary')
-            st2 = StringTemplate('Су-37', 'default')
-
-            d['hobby_list_models'] = [st1, st2]
-
-        if p is not None:
-            if p in [str(x + 1) for x in range(5)]:
-                MySession.set_hobby_index(request, p)
-                d['hobby_cur_image'] = path + p + '.jpg'
-
-    d['debug_value'] = MySession.get_hobby_index(request)
-
-    image_list = []
-
-    for x in range(5):
-        str_n = str(x + 1)
-        s = StringTemplate(path + str_n + '.jpg', 'photo' + str_n)
-        s.link = '/hobbies/?page=' + str_n
-        image_list.append(s)
-
-    d['image_list'] = image_list
+    model = get_model(model_index)
+    model.mainimagesrc = get_path_to_static(model_index) + p + '.jpg'
+    d["model"] = model
 
     return render_to_response(pages[index] + '.html', d)
 
