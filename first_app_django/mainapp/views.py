@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 import datetime
 from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
+from mainapp.sessioncontrol import MySession
 
 
 def get_mainsmenu_captions():
@@ -85,21 +86,6 @@ class MyMainMenuManager:
             self.menuItemList.append(MyMainMenuItem(list_caption[i], '/' + list_links[i], index == len(self.menuItemList)))
 
 
-class MySession:
-
-    @staticmethod
-    def get_hobby_index(request):
-        x = request.session.get('hobby_index')
-        if x is None:
-            request.session['hobby_index'] = 0
-
-        return request.session['hobby_index']
-
-    @staticmethod
-    def set_hobby_index(request, val):
-        request.session['hobby_index'] = val
-
-
 def get_common_dict(index):
     page_title = 'AboutMe project'
     menu_manager = MyMainMenuManager(index)
@@ -169,7 +155,7 @@ def hobbies(request):
 
     model_index = MySession.get_hobby_index(request)
     model = get_model(model_index)
-    model.mainimagesrc = get_path_to_static(model_index) + p + '.jpg'
+    model.main_image_src = get_path_to_static(model_index) + p + '.jpg'
     d['debug_value'] = model_index
     d['model'] = model
 

@@ -48,14 +48,14 @@
 
         <div class="panel panel-default">
             <div class="panel-body">
-                <b>Модель {{model.name}}, {{model.shortdesc}}</b>
+                <b>Модель {{model.name}}, {{model.short_desc}}</b>
             </div>
 
             <div class="image_template_container">
                 <div class="row">
                     <div class="col-xs-6 col-md-9">
                         <div class="thumbnail">
-                            <img src='{{model.mainimagesrc}}' alt="{{model.name}}">
+                            <img src='{{model.main_image_src}}' alt="{{model.name}}">
                         </div>
                     </div>
                 </div>
@@ -68,15 +68,14 @@
 
                 <b>{{debug_value}}</b>
                 <br>
-                <a class="btn btn-default" href="{{model.buttonlink}}" target="_blank" role="button">
-                    {{model.buttonname}}
+                <a class="btn btn-default" href="{{model.button_link}}" target="_blank" role="button">
+                    {{model.button_name}}
                 </a>
             </div>
-
         </div>
 
         <div class="row">
-            {% for s in model.smallimages %}
+            {% for s in model.small_images %}
             <div class="col-xs-6 col-md-1">
                 <a href="{{s.item2}}" class="thumbnail">
                     <img src='{{s.item1}}' alt="small photo">

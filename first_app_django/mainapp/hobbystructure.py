@@ -1,14 +1,14 @@
 class MyHobbyStructure:
     def __init__(self, caption):
         self.name = caption
-        self.shortdesc = ''
+        self.short_desc = ''
         self.desc = []
 
-        self.buttonname = self.name + ' на Википедии'
-        self.buttonlink = ''
+        self.button_name = self.name + ' на Википедии'
+        self.button_link = ''
 
-        self.mainimagesrc = ''
-        self.smallimages = []
+        self.main_image_src = ''
+        self.small_images = []
 
     def __str__(self):
         return self.name
@@ -53,7 +53,7 @@ def get_model(index):
     model = MyHobbyStructure(names[index])
 
     if index == 0:
-        model.shortdesc = 'фронтовой бомбардировщик'
+        model.short_desc = 'фронтовой бомбардировщик'
         model.desc = ['''Су-24 советский и российский тактический фронтовой бомбардировщик с крылом изменяемой
                        стреловидности, предназначенный для нанесения ракетно-бомбовых ударов в простых и сложных
                        метеоусловиях, днём и ночью, в том числе на малых высотах с прицельным поражением наземных и
@@ -62,19 +62,19 @@ def get_model(index):
                        летающая боевая машина находится на вооружении и по сей день. Более того, ее активно
                        модернизируют и совершенствуют, ведь ее качества актуальны и на сегодняшний день.''',
                        'Самолет хорошо себя зарекомендовала во время боевой опреации в Сирии.']
-        model.buttonlink = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
+        model.button_link = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-24'
     elif index == 1:
-        model.shortdesc = 'экспериментальный сверхманевренный истребитель'
+        model.short_desc = 'экспериментальный сверхманевренный истребитель'
         model.desc = ['''Су-37 (по кодификации НАТО: Flanker-F) — российский экспериментальный сверхманевренный истребитель
                       четвёртого поколения с передним горизонтальным оперением (ПГО) и двигателями с УВТ. Создан на
                       базе истребителя Су-27М.''',
                       '''Самолет имеет технологию управляемого вектора тяги, которую предполагалось использовать
                       на новых машинах семейства Сухого. Отработанные на нём решения легли в основу создания самолётов
                       пятого поколения.''']
-        model.buttonlink = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-37'
+        model.button_link = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-37'
 
     path = get_path_to_static(index)
-    model.mainimagesrc = path + '1.jpg'
+    model.main_image_src = path + '1.jpg'
 
     small_images = []
 
@@ -83,7 +83,7 @@ def get_model(index):
         si = StringTemplate(path + str_x + '.jpg', '/hobbies/?page=' + str_x)
         small_images.append(si)
 
-    model.smallimages = small_images
+    model.small_images = small_images
 
     return model
 
