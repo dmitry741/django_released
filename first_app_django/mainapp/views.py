@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 import datetime
-from mainapp.hobbystructure import MyHobbyStructure, get_model, get_model_captions, get_path_to_static
+from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
 
 
 def get_mainsmenu_captions():
@@ -140,7 +140,6 @@ def cv(request):
 def projects(request):
     index = 2
     pages = get_mainmenu_links()
-
     d = get_common_dict(index)
 
     return render_to_response(pages[index] + '.html', d)
@@ -150,10 +149,8 @@ def hobbies(request):
     index = 3
     pages = get_mainmenu_links()
 
-    model_index = MySession.get_hobby_index(request)
-
     d = get_common_dict(index)
-    d['hobby_list_models'] = get_model_captions()
+    d['hobby_list_models'] = get_nav_hobby()
 
     p = '1'
 
@@ -162,12 +159,19 @@ def hobbies(request):
 
         if p is None:
             p = '1'
-        elif not p in [str(x + 1) for x in range(5)]:
+        elif p not in [str(x + 1) for x in range(5)]:
             p = '1'
 
+        hp = request.GET.get('model')
+
+        if hp is not None and hp in [str(x) for x in range(2)] :
+            MySession.set_hobby_index(request, int(hp))
+
+    model_index = MySession.get_hobby_index(request)
     model = get_model(model_index)
     model.mainimagesrc = get_path_to_static(model_index) + p + '.jpg'
-    d["model"] = model
+    d['debug_value'] = model_index
+    d['model'] = model
 
     return render_to_response(pages[index] + '.html', d)
 
@@ -175,7 +179,6 @@ def hobbies(request):
 def contacts(request):
     index = 4
     pages = get_mainmenu_links()
-
     d = get_common_dict(index)
 
     return render_to_response(pages[index] + '.html', d)

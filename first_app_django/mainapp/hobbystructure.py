@@ -27,6 +27,17 @@ def get_model_captions():
     return ['Су-24', 'Су-37']
 
 
+def get_nav_hobby():
+    list_names = get_model_captions()
+    st_list = []
+
+    for x in range(2):
+        st = StringTemplate(list_names[x], '/hobbies/?model=' + str(x))
+        st_list.append(st)
+
+    return st_list
+
+
 def get_path_to_static(index):
 
     if index == 0:
