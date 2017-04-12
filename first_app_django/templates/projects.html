@@ -36,8 +36,64 @@
         </div>
         {% include 'inc/inc_main_menu.html' %}
     </div>
-    <div class="main">
-        projects
+        <div class="main_hb">
+
+        <ol class="breadcrumb">
+            <li class="active"><b>МОИ МОДЕЛИ</b></li>
+            <li><a href="#"><b>Project 1</b></a></li>
+            <li><a href="#"><b>Project 2</b></a></li>
+            <li><a href="#"><b>Project 3</b></a></li>
+            <!--{% for s in hobby_list_models %}-->
+            <!--<li><a href="{{s.item2}}"><b>{{s.item1}}</b></a></li>-->
+            <!--{% endfor %}-->
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <b>Описание проекта</b>
+            </div>
+
+            <div class="image_template_container">
+                <div class="row">
+                    <div class="col-xs-6 col-md-9">
+                        <div class="thumbnail">
+                            картинка
+                            <!--<img src='{{model.main_image_src}}' alt="{{model.name}}">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="context_template_container">
+                <h4>Описание</h4>
+                <!--{% for s in model.desc %}-->
+                <!--<p>{{s}}</p>-->
+                <!--{% endfor %}-->
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid delectus deleniti ducimus,
+                    explicabo incidunt ipsa iste labore, libero officia quasi quo repudiandae sit ut? Non suscipit,
+                    tempore! Deserunt, libero, vel.
+                </div>
+                <div>Alias, aliquid blanditiis dolorem et incidunt ipsam minus, odio omnis qui, quidem sunt temporibus
+                    veritatis! Beatae dolore eaque et impedit suscipit voluptatem? A eligendi in, libero molestiae non
+                    nostrum provident?
+                </div>
+                <div>Accusamus explicabo itaque minima nemo, pariatur quasi rerum? Accusantium consequatur deserunt
+                    ducimus, earum eius, eum ex facere harum minima nam nesciunt repellendus rerum, unde vel voluptas!
+                    Cum deserunt modi nulla?
+                </div>
+                <br>
+
+            </div>
+        </div>
+
+        <!--<div class="row">-->
+            <!--{% for s in model.small_images %}-->
+            <!--<div class="col-xs-6 col-md-1">-->
+                <!--<a href="{{s.item2}}" class="thumbnail">-->
+                    <!--<img src='{{s.item1}}' alt="small photo">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--{% endfor %}-->
+        <!--</div>-->
     </div>
 
 </div>
