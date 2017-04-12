@@ -39,12 +39,19 @@
 
     <div class="main_hb">
 
-        <h4><span class="label label-primary">Мои модели</span></h4>
-        <ul class="nav nav-pills">
+        <ol class="breadcrumb">
+            <li class="active"><b>МОИ МОДЕЛИ</b></li>
             {% for s in hobby_list_models %}
-            <li role="presentation"><a href="{{s.item2}}"><b>{{s.item1}}</b></a></li>
+            <li><a href="{{s.item2}}"><b>{{s.item1}}</b></a></li>
             {% endfor %}
-        </ul>
+        </ol>
+
+        <!--<ul class="nav nav-pills">-->
+        <!--<li role="presentation" class="disabled"><a href="#"><b>МОИ МОДЕЛИ</b></a></li>-->
+        <!--{% for s in hobby_list_models %}-->
+        <!--<li role="presentation"><a href="{{s.item2}}"><b>{{s.item1}}</b></a></li>-->
+        <!--{% endfor %}-->
+        <!--</ul>-->
 
         <div class="panel panel-default">
             <div class="panel-body">
