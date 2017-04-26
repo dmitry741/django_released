@@ -2,6 +2,7 @@ from django.shortcuts import render, render_to_response
 import datetime
 from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
 from mainapp.sessioncontrol import MySession
+from mainapp.projectstructure import MyProjectStructure
 
 
 def get_mainsmenu_captions():
@@ -127,6 +128,8 @@ def projects(request):
     index = 2
     pages = get_mainmenu_links()
     d = get_common_dict(index)
+
+    my_project_structure = MyProjectStructure()
 
     return render_to_response(pages[index] + '.html', d)
 
