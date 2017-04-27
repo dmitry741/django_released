@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 import datetime
 from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
 from mainapp.sessioncontrol import MySession
-from mainapp.projectstructure import MyProjectStructure
+from mainapp.projectstructure import MyProjectStructure, Carusel
 
 
 def get_mainsmenu_captions():
@@ -129,7 +129,61 @@ def projects(request):
     pages = get_mainmenu_links()
     d = get_common_dict(index)
 
+    # 1
+    caption = 'Игра Жизнь'
+    text = 'Игра Жизнь (англ. Conway\'s Game of Life) - клеточный автомат, придуманный английским математиком Джоном '\
+        'Конвеем в 1970 году. Программная реализация игры в виде десктопного приложения написанного на C#.'
+    button_text = 'Перейти на GitHub'
+    button_link = 'https://github.com/dmitry741/gamelife_project.git'
+    active = 'item active'
+    class_name = 'first-slide'
+    alt = 'First slide'
+
+    carusel1 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+
+    # 2
+    caption = 'Расчетная программа АО Ридан'
+    text = 'Программа для расчета и подбора теплообменников. Программа преимущественно ориентирована на специалистов в'\
+        ' подборе теплообменников для сферы жилищно-коммунального хозяйства.'
+    button_text = 'Перейти на сайт'
+    button_link = 'http://www.ridan.ru/raschet-i-zakaz/raschetnaja_programma_ridan'
+    active = 'item'
+    class_name = 'second-slide'
+    alt = 'Second slide'
+
+    carusel2 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+
+    # 3
+    caption = 'SusaninLab: поиск кратчайших маршрутов'
+    text = 'Программа для решения ряда классических задач на взвешенном графе: задача коммивояжера, кратчайший путь '\
+        'между двумя вершинами, построение минимального остовного дерева.'
+    button_text = 'Перейти на промо-сайт'
+    button_link = 'http://www.orpal.ru'
+    active = 'item'
+    class_name = 'third-slide'
+    alt = 'Third slide'
+
+    carusel3 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+
+    # 4
+    caption = 'Сайт-визитка'
+    text = 'Одним из проектов является данный сайт. Он написан с использованием одного из популярных веб-фреймверков'\
+        ' Django, где встроенным языком программирования является Python.'
+    button_text = 'Перейти к описанию'
+    button_link = '#'
+    active = 'item'
+    class_name = 'fourth-slide'
+    alt = 'Fourth slide'
+
+    carusel4 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+
     my_project_structure = MyProjectStructure()
+    my_project_structure.carusel.append(carusel1)
+    my_project_structure.carusel.append(carusel2)
+    my_project_structure.carusel.append(carusel3)
+    my_project_structure.carusel.append(carusel4)
+
+    d['projects_data'] = my_project_structure
 
     return render_to_response(pages[index] + '.html', d)
 
