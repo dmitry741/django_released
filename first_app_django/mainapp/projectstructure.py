@@ -32,3 +32,4 @@ class MyProjectStructure:
     def __init__(self):
         self.carusel = []
         self.project_page = []
+        self.indicators = []

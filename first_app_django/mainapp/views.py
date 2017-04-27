@@ -183,6 +183,12 @@ def projects(request):
     my_project_structure.carusel.append(carusel3)
     my_project_structure.carusel.append(carusel4)
 
+    my_project_structure.indicators.append((0, 'active'))
+    my_project_structure.indicators.append((1, ''))
+    my_project_structure.indicators.append((2, ''))
+    my_project_structure.indicators.append((3, ''))
+
+
     d['projects_data'] = my_project_structure
 
     return render_to_response(pages[index] + '.html', d)
