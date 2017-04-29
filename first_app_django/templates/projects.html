@@ -59,10 +59,10 @@
                     <img class="{{carusel.class_name}}" src='{% static "images/slide1.png" %}' alt="{{carusel.alt}}">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h2>{{carusel}}</h2>
+                            <h3>{{carusel}}</h3>
                             <p>{{carusel.text}}</p>
                             <p>
-                                <a class="btn btn-lg btn-primary" href="{{carusel.button_link}}" role="button">{{carusel.button_text}}</a>
+                                <a class="btn btn-primary" href="{{carusel.button_link}}" role="button">{{carusel.button_text}}</a>
                             </p>
                         </div>
                     </div>
@@ -114,8 +114,23 @@
                     GDI+.
                 </p>
                 <p><b>Стэк технологий.</b>
-                    C#, GDI+.
+                <h4>
+
+                    <div class="skill_container">
+                        <span class="label label-default">C#</span>
+                    </div>
+                    <div class="skill_container">
+                        <span class="label label-default">GDI+</span>
+                    </div>
+                </h4>
                 </p>
+                <br>
+                <div class="clr_block_text"></div>
+                <br>
+                <p>
+                    <a class="btn btn-primary" href="{{projects_data.carusel.0.button_link}}" role="button">{{projects_data.carusel.0.button_text}}</a>
+                </p>
+
             </div>
             <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
