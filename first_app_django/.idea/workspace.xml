@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95fe66ba-8fe1-4d22-8720-a435d8a807ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/projects/pr1.png" afterPath="$PROJECT_DIR$/static/images/projects/pr1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainapp/projectstructure.py" afterPath="$PROJECT_DIR$/mainapp/projectstructure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainapp/views.py" afterPath="$PROJECT_DIR$/mainapp/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects.html" afterPath="$PROJECT_DIR$/templates/projects.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +27,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="229" column="53" lean-forward="false" selection-start-line="229" selection-start-column="53" selection-end-line="229" selection-end-column="53" />
+            <state relative-caret-position="-458">
+              <caret line="129" column="108" lean-forward="false" selection-start-line="129" selection-start-column="108" selection-end-line="129" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
@@ -154,9 +151,9 @@
         <option value="$PROJECT_DIR$/mainapp/models.py" />
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/mainapp/projectstructure.py" />
+        <option value="$PROJECT_DIR$/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/templates/projects.html" />
-        <option value="$PROJECT_DIR$/mainapp/views.py" />
-        <option value="$PROJECT_DIR$/mainapp/views.py" />
       </list>
     </option>
   </component>
@@ -907,6 +904,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="197" column="56" lean-forward="true" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/projectstructure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -917,19 +924,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="229" column="53" lean-forward="false" selection-start-line="229" selection-start-column="53" selection-end-line="229" selection-end-column="53" />
+        <state relative-caret-position="-458">
+          <caret line="129" column="108" lean-forward="false" selection-start-line="129" selection-start-column="108" selection-end-line="129" selection-end-column="108" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="197" column="56" lean-forward="true" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
