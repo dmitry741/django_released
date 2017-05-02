@@ -30,9 +30,16 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-458">
-              <caret line="129" column="108" lean-forward="false" selection-start-line="129" selection-start-column="108" selection-end-line="129" selection-end-column="108" />
-              <folding />
+            <state relative-caret-position="477">
+              <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+              <folding>
+                <element signature="e#7587#7593#0" expanded="true" />
+                <element signature="e#7677#7683#0" expanded="true" />
+                <element signature="e#8245#8252#0" expanded="true" />
+                <element signature="e#8456#8463#0" expanded="true" />
+                <element signature="e#8664#8671#0" expanded="true" />
+                <element signature="e#9030#9036#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,8 +171,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="212" />
-    <option name="y" value="74" />
+    <option name="x" value="185" />
+    <option name="y" value="62" />
     <option name="width" value="1572" />
     <option name="height" value="1042" />
   </component>
@@ -531,7 +538,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="212" y="74" width="1572" height="1042" extended-state="0" />
+    <frame x="185" y="62" width="1572" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20565553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -924,9 +931,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="129" column="108" lean-forward="false" selection-start-line="129" selection-start-column="108" selection-end-line="129" selection-end-column="108" />
-          <folding />
+        <state relative-caret-position="477">
+          <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+          <folding>
+            <element signature="e#7587#7593#0" expanded="true" />
+            <element signature="e#7677#7683#0" expanded="true" />
+            <element signature="e#8245#8252#0" expanded="true" />
+            <element signature="e#8456#8463#0" expanded="true" />
+            <element signature="e#8664#8671#0" expanded="true" />
+            <element signature="e#9030#9036#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
