@@ -188,6 +188,10 @@ def projects(request):
     my_project_structure.indicators.append((2, ''))
     my_project_structure.indicators.append((3, ''))
 
+    my_project_structure.stack.append(('C#', 'GDI+'))
+    my_project_structure.stack.append(('C#', 'GDI+', 'SQL'))
+    my_project_structure.stack.append(('C++', 'STL', 'ActiveX', 'COM', 'GDI+'))
+    my_project_structure.stack.append(('Django', 'Python', 'HTML', 'Bootstrap'))
 
     d['projects_data'] = my_project_structure
 
