@@ -30,15 +30,15 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+            <state relative-caret-position="392">
+              <caret line="170" column="74" lean-forward="false" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
               <folding>
                 <element signature="e#7587#7593#0" expanded="true" />
                 <element signature="e#7677#7683#0" expanded="true" />
-                <element signature="e#8245#8252#0" expanded="true" />
-                <element signature="e#8456#8463#0" expanded="true" />
-                <element signature="e#8664#8671#0" expanded="true" />
-                <element signature="e#9030#9036#0" expanded="true" />
+                <element signature="e#8476#8482#0" expanded="true" />
+                <element signature="e#8684#8690#0" expanded="true" />
+                <element signature="e#8893#8899#0" expanded="true" />
+                <element signature="e#9246#9252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="197" column="56" lean-forward="true" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
+            <state relative-caret-position="3281">
+              <caret line="197" column="56" lean-forward="false" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -171,8 +171,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="185" />
-    <option name="y" value="62" />
+    <option name="x" value="162" />
+    <option name="y" value="66" />
     <option name="width" value="1572" />
     <option name="height" value="1042" />
   </component>
@@ -216,6 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,7 +327,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -538,7 +538,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="185" y="62" width="1572" height="1042" extended-state="0" />
+    <frame x="162" y="66" width="1572" height="1042" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20565553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -907,14 +907,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="197" column="56" lean-forward="true" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
+        <state relative-caret-position="3281">
+          <caret line="197" column="56" lean-forward="false" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
@@ -931,15 +930,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+        <state relative-caret-position="392">
+          <caret line="170" column="74" lean-forward="false" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
           <folding>
             <element signature="e#7587#7593#0" expanded="true" />
             <element signature="e#7677#7683#0" expanded="true" />
-            <element signature="e#8245#8252#0" expanded="true" />
-            <element signature="e#8456#8463#0" expanded="true" />
-            <element signature="e#8664#8671#0" expanded="true" />
-            <element signature="e#9030#9036#0" expanded="true" />
+            <element signature="e#8476#8482#0" expanded="true" />
+            <element signature="e#8684#8690#0" expanded="true" />
+            <element signature="e#8893#8899#0" expanded="true" />
+            <element signature="e#9246#9252#0" expanded="true" />
           </folding>
         </state>
       </provider>
