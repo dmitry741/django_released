@@ -30,15 +30,17 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="170" column="74" lean-forward="false" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
+            <state relative-caret-position="477">
+              <caret line="136" column="54" lean-forward="false" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
               <folding>
-                <element signature="e#7587#7593#0" expanded="true" />
-                <element signature="e#7677#7683#0" expanded="true" />
-                <element signature="e#8476#8482#0" expanded="true" />
-                <element signature="e#8684#8690#0" expanded="true" />
-                <element signature="e#8893#8899#0" expanded="true" />
-                <element signature="e#9246#9252#0" expanded="true" />
+                <element signature="e#4606#4612#0" expanded="true" />
+                <element signature="e#6050#6056#0" expanded="true" />
+                <element signature="e#7588#7594#0" expanded="true" />
+                <element signature="e#7678#7684#0" expanded="true" />
+                <element signature="e#8477#8483#0" expanded="true" />
+                <element signature="e#8685#8691#0" expanded="true" />
+                <element signature="e#8894#8900#0" expanded="true" />
+                <element signature="e#9247#9253#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -538,7 +540,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="162" y="66" width="1572" height="1042" extended-state="1" />
+    <frame x="162" y="66" width="1572" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20565553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -930,15 +932,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="170" column="74" lean-forward="false" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
+        <state relative-caret-position="477">
+          <caret line="136" column="54" lean-forward="false" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
           <folding>
-            <element signature="e#7587#7593#0" expanded="true" />
-            <element signature="e#7677#7683#0" expanded="true" />
-            <element signature="e#8476#8482#0" expanded="true" />
-            <element signature="e#8684#8690#0" expanded="true" />
-            <element signature="e#8893#8899#0" expanded="true" />
-            <element signature="e#9246#9252#0" expanded="true" />
+            <element signature="e#4606#4612#0" expanded="true" />
+            <element signature="e#6050#6056#0" expanded="true" />
+            <element signature="e#7588#7594#0" expanded="true" />
+            <element signature="e#7678#7684#0" expanded="true" />
+            <element signature="e#8477#8483#0" expanded="true" />
+            <element signature="e#8685#8691#0" expanded="true" />
+            <element signature="e#8894#8900#0" expanded="true" />
+            <element signature="e#9247#9253#0" expanded="true" />
           </folding>
         </state>
       </provider>
