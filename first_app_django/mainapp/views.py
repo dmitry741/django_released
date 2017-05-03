@@ -190,8 +190,8 @@ def projects(request):
 
     my_project_structure.stack.append(('C#', 'GDI+', 'Git'))
     my_project_structure.stack.append(('C#', 'GDI+', 'SQL', 'TFS'))
-    my_project_structure.stack.append(('C++', 'STL', 'ActiveX', 'COM', 'GDI+'))
-    my_project_structure.stack.append(('Django', 'Python', 'HTML', 'Bootstrap'))
+    my_project_structure.stack.append(('C++', 'STL', 'MFC', 'ActiveX', 'COM', 'GDI+'))
+    my_project_structure.stack.append(('Django', 'Python', 'HTML', 'Bootstrap', 'Git'))
 
     d['projects_data'] = my_project_structure
 
