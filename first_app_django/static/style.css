@@ -59,7 +59,7 @@ html, body {
     margin-right: 0;
     margin-top: 1%;
 
-    min-height: 3200px;
+    min-height: 3300px;
 }
 
 .container .main_pr img {
@@ -116,6 +116,10 @@ html, body {
 .footer_copy {
     margin-left: 5%;
     color: lightgrey;
+}
+
+.list_container {
+margin-left: 30px;
 }
 
 @media screen and (max-width: 1000px) {

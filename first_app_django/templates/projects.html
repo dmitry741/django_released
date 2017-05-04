@@ -127,7 +127,8 @@
                 <div class="clr_block_text"></div>
                 <br>
                 <p>
-                    <a class="btn btn-primary" href="{{projects_data.carusel.0.button_link}}" target="_blank" role="button">{{projects_data.carusel.0.button_text}}</a>
+                    <a class="btn btn-primary" href="{{projects_data.carusel.0.button_link}}" target="_blank"
+                       role="button">{{projects_data.carusel.0.button_text}}</a>
                 </p>
 
             </div>
@@ -158,15 +159,16 @@
                     Программа имеет следующий функционал:
                 </p>
                 <p>
-                    <i>Стандартный расчет</i>.&nbsp;Подбор теплообменников по имеющимся, наиболее напряженным
+                    <i><u>Стандартный расчет</u></i>.&nbsp;Подбор теплообменников по имеющимся, наиболее напряженным
                     тепло-гидравлическим условиям работы.
                 </p>
                 <p>
-                    <i>Поверочный расчет</i>.&nbsp;Определение тепло-гидравлических характеристик выбранного теплообменника
+                    <i><u>Поверочный расчет</u></i>.&nbsp;Определение тепло-гидравлических характеристик выбранного
+                    теплообменника
                     при заданном режиме.
                 </p>
                 <p>
-                    <i>Расчет на кондесацию</i>.&nbsp;Разновидность стандартного расчета, где в качестве греющей среды
+                    <i><u>Расчет на кондесацию</u></i>.&nbsp;Разновидность стандартного расчета, где в качестве греющей среды
                     выступает пар, который проходя по теплообменнику конденсируется и выходит в виде жидкости.
                     Принципиальным моментом данного типа расчета является фазовый переход греющей среды.
                 </p>
@@ -175,8 +177,8 @@
                     разработке и развитии физической и математической моделей расчета. Здесь есть реализация
                     матричных операций, решение систем нелинейных уравнений, различных видов апроксимаций.
                 </p>
-                 <p><b>Стэк технологий.</b>
-               <h4>
+                <p><b>Стэк технологий.</b>
+                <h4>
                     {% for s in projects_data.stack.1 %}
                     <div class="skill_container">
                         <span class="label label-default">{{s}}</span>
@@ -188,7 +190,8 @@
                 <div class="clr_block_text"></div>
                 <br>
                 <p>
-                    <a class="btn btn-primary" href="{{projects_data.carusel.1.button_link}}" role="button" target="_blank">{{projects_data.carusel.1.button_text}}</a>
+                    <a class="btn btn-primary" href="{{projects_data.carusel.1.button_link}}" role="button"
+                       target="_blank">{{projects_data.carusel.1.button_text}}</a>
                 </p>
             </div>
             <div class="col-md-5 col-md-pull-7">
@@ -207,13 +210,43 @@
                     <span class="text-muted">&nbsp;Поиск кратчайших маршрутов.
                     </span>
                 </h3>
-                <p><b>Описание.</b>&nbsp;
-                    арукщшаощу
+                <p><b>Описание.</b>&nbsp;&nbsp;
+                    В результате увлечения комбинаторными алгоритмами и теорией графов появилась программа SusaninLab.
+                    Первая задача, которую решает программа SusaninLab это поиск наиболее оптимального маршрута.
+                    Чуть подробнее это звучит так &mdash; необходимо выйти из пункта А, обойти пункты C1, C2, ... Cn и
+                    попасть в пункт B при этом затратив как можно меньше времени (денег, бензина и т. п.). Сами пункты
+                    А и В могут совпадать. В этом случае мы получаем одну из классических задач теории графов &mdash;
+                    задачу коммивояжера. Вторая задача математическим языком формулируется как задача построения
+                    минимального остовного дерева.
                 </p>
-                <p><b>Техническая реализация</b>&nbsp;
-                    goerjgewr[jg[wrjg[wer SusaninLab
+                <br>
+                <h4>Основные возможности</h4>
+
+                <div class="list_container">
+                    <ul class="rounded">
+                        <li>Решение задачи о поиске кратчайшего пути между двумя пунктами</li>
+                        <li>Решение классической задачи коммивояжера</li>
+                        <li>Построение минимального остовного дерева</li>
+                        <li>Построение оптимальных путей на ориентированных графах</li>
+                        <li>Создание и редактирование графа в интерактивном режиме</li>
+                        <li>Сохранение графа в виде файла для последующей работы</li>
+                        <li>Сохранение графа как изображения в форматы BMP, JPG, PNG</li>
+                        <li>Управление эвристикой алгоритма: медленный поиск - более точное решение,
+                            быстрый поиск - менее точное решение
+                        </li>
+                    </ul>
+                </div>
+
+                <br>
+                <p><b>Техническая реализация.</b>&nbsp;&nbsp;
+                    Каркас программы написан на Visual C++ с использованием библиотеки MFC. Он включает в себя два
+                    самостоятельных модуля (библиотеки) ELGraphVisio и ELSusaninPath, каждый из которых выполнен в виде
+                    ActiveX COM DLL. ELGraphVisio занимается отрисовкой графов. ELSusaninPath ищет оптимальные пути и
+                    строит остовные деревья. Эти две библиотеки могут быть встроены в любое другое приложение,
+                    при условии поддержки средой разработки технологии ActiveX. Основное приложение интегрирует эти две
+                    библиотеки.
                 </p>
-                 <p><b>Стэк технологий.</b>
+                <p><b>Стэк технологий.</b>
                 <h4>
                     {% for s in projects_data.stack.2 %}
                     <div class="skill_container">
@@ -226,13 +259,14 @@
                 <div class="clr_block_text"></div>
                 <br>
                 <p>
-                    <a class="btn btn-primary" href="{{projects_data.carusel.2.button_link}}" target="_blank" role="button">{{projects_data.carusel.2.button_text}}</a>
+                    <a class="btn btn-primary" href="{{projects_data.carusel.2.button_link}}" target="_blank"
+                       role="button">{{projects_data.carusel.2.button_text}}</a>
                 </p>
             </div>
             <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
                      alt="500x500"
-                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1Yjc3Zjg4OTUyIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTViNzdmODg5NTIiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEyNSIgeT0iMjYxLjEiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
+                     src='{% static "images/projects/pr3.png" %}'
                      data-holder-rendered="true">
             </div>
         </div>
@@ -249,7 +283,7 @@
                 <p><b>Техническая реализация</b>&nbsp;
                     айаукпукр67 р565рнрnytnt
                 </p>
-                 <p><b>Стэк технологий.</b>
+                <p><b>Стэк технологий.</b>
                 <h4>
                     {% for s in projects_data.stack.3 %}
                     <div class="skill_container">
