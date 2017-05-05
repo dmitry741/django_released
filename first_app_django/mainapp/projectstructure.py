@@ -1,9 +1,9 @@
 class BaseProject:
+
     def __init__(self, caption, button_text, button_link):
         self.caption = caption
         self.button_text = button_text
         self.button_link = button_link
-
 
     def __str__(self):
         return self.caption
