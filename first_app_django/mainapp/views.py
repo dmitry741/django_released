@@ -32,6 +32,9 @@ class CelebrateDay:
     def __eq__(self, other):
         return other[0] == self.day and other[1] == self.month
 
+    def __ne__(self, other):
+        return other[0] != self.day or other[1] != self.month
+
 
 class Celebrates:
 
@@ -55,10 +58,9 @@ class Celebrates:
     def get_item(self, dm):
         item = None
 
-        for x in self.list:
-            if dm == x:
-                item = x
-                break
+        if dm in self.list:
+            index = self.list.index(dm)
+            item = self.list[index]
 
         return item
 
@@ -154,7 +156,7 @@ def main(request):
     cd = cel.get_item([cur_date.day, cur_date.month])
 
     if cd:
-        d['cd'] = ': ' + cd.text
+        d['cd'] = '. ' + cd.text
         d['label_type'] = 'danger'
     else:
         d['cd'] = ''
