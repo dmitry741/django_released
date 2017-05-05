@@ -19,9 +19,48 @@ def skill_list():
             'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql')
 
 
-# def get_cv_items():
-#     return ('Синопсис', 'Образование', 'Опыт', 'Языки программирования', 'IDE', 'Технологии', 'Иностранные языки',
-#             'Электронные сертификаты')
+class CelebrateDay:
+
+    def __init__(self, day, month, text):
+        self.day = day
+        self.month = month
+        self.text = text
+
+    def __str__(self):
+        return self.text
+
+    def __eq__(self, other):
+        return other[0] == self.day and other[1] == self.month
+
+
+class Celebrates:
+
+    def __init__(self):
+        self.list = []
+
+        self.list.append(CelebrateDay(1, 1, 'Новый год'))
+        self.list.append(CelebrateDay(7, 1, 'Рождество Христово'))
+        self.list.append(CelebrateDay(6, 2, 'Мой день рожденья!'))
+        self.list.append(CelebrateDay(8, 3, 'Международный женский день'))
+        self.list.append(CelebrateDay(12, 4, 'День космонавтики'))
+        self.list.append(CelebrateDay(1, 5, 'День весны и труда'))
+        self.list.append(CelebrateDay(9, 5, 'День Победы'))
+        self.list.append(CelebrateDay(12, 6, 'День России'))
+        self.list.append(CelebrateDay(1, 9, 'День знаний'))
+        self.list.append(CelebrateDay(4, 11, 'День народного единства'))
+
+        # test item
+        #self.list.append(CelebrateDay(5, 5, 'Весна! 5 мая'))
+
+    def get_item(self, dm):
+        item = None
+
+        for x in self.list:
+            if dm == x:
+                item = x
+                break
+
+        return item
 
 
 def get_age(_year, _month, _day):
@@ -109,6 +148,18 @@ def main(request):
     d = get_common_dict(index)
     d['cur_time'] = get_string_cur_date()
 
+    cel = Celebrates()
+    cur_date = datetime.datetime.now()
+
+    cd = cel.get_item([cur_date.day, cur_date.month])
+
+    if cd:
+        d['cd'] = ': ' + cd.text
+        d['label_type'] = 'danger'
+    else:
+        d['cd'] = ''
+        d['label_type'] = 'default'
+
     return render_to_response(pages[index] + '.html', d)
 
 
@@ -170,7 +221,7 @@ def projects(request):
     text = 'Одним из проектов является данный сайт. Он написан с использованием одного из популярных веб-фреймверков'\
         ' Django, где встроенным языком программирования является Python.'
     button_text = 'Перейти к описанию'
-    button_link = '#'
+    button_link = '#ps'
     active = 'item'
     class_name = 'fourth-slide'
     alt = 'Fourth slide'
