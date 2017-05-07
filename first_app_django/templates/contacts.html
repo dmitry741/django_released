@@ -37,11 +37,15 @@
         {% include 'inc/inc_main_menu.html' %}
     </div>
     <div class="main_con">
-        <form action="/your-name/" method="post">
-            {% csrf_token %}
-            {{ contact_form.as_table }}
-            <input type="submit" value="Submit"/>
-        </form>
+        <div class="contact_block">
+            <form action="/your-name/" method="post">
+                <table>
+                {% csrf_token %}
+                {{ contact_form.as_table }}
+                </table>
+                <input type="submit" value="Отправить" class="btn btn-primary"/>
+            </form>
+        </div>
     </div>
 
 </div>

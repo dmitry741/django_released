@@ -288,6 +288,7 @@ def contacts(request):
     pages = get_mainmenu_links()
     d = get_common_dict(index)
 
+    # use django form
     form = MyContactForm()
     d['contact_form'] = form
 
