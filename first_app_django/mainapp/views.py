@@ -3,6 +3,7 @@ import datetime
 from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
 from mainapp.sessioncontrol import MySession
 from mainapp.projectstructure import MyProjectStructure, Carusel
+from mainapp.djform import MyContactForm
 
 
 def get_mainsmenu_captions():
@@ -53,7 +54,7 @@ class Celebrates:
         self.list.append(CelebrateDay(4, 11, 'День народного единства'))
 
         # test item
-        #self.list.append(CelebrateDay(5, 5, 'Весна! 5 мая'))
+        # self.list.append(CelebrateDay(5, 5, 'Весна! 5 мая'))
 
     def get_item(self, dm):
         item = None
@@ -286,5 +287,8 @@ def contacts(request):
     index = 4
     pages = get_mainmenu_links()
     d = get_common_dict(index)
+
+    form = MyContactForm()
+    d['contact_form'] = form
 
     return render_to_response(pages[index] + '.html', d)
