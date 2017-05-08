@@ -26,4 +26,5 @@ urlpatterns += [
     url(r'^contacts[|/]$', contacts),
     url(r'^hobbies[|/]$', hobbies),
     url(r'^projects[|/]$', projects),
+    url(r'^feedback$', feeadback)
 ]

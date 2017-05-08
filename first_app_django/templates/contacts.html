@@ -38,12 +38,17 @@
     </div>
     <div class="main_con">
         <div class="contact_block">
-            <form action="/feedback/" method="post">
+            <form action="/feedback" method="post">
                 {% csrf_token %}
                 <table>
                 {{ contact_form.as_table }}
                 </table>
                 <input type="submit" value="Отправить" class="btn btn-primary"/>
+
+                {% if feed_success %}
+                <div class="alert alert-success" role="alert">{{feed_success}}</div>
+                {% endif %}
+
             </form>
         </div>
     </div>

@@ -293,3 +293,17 @@ def contacts(request):
     d['contact_form'] = form
 
     return render_to_response(pages[index] + '.html', d)
+
+
+def feeadback(request):
+    index = 4
+    pages = get_mainmenu_links()
+    d = get_common_dict(index)
+
+    # use django form
+    form = MyContactForm()
+    d['contact_form'] = form
+
+    d['feed_success'] = 'fwefw'
+
+    return render_to_response(pages[index] + '.html', d)
