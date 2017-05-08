@@ -38,18 +38,40 @@
     </div>
     <div class="main_con">
         <div class="contact_block">
+            <div class="page-header">
+                <h3>Контактная информация</h3>
+                <p>
+                    Если у Вас есть какие либо вопросы, воспользуйтесь формой ниже, чтобы написать сообщение.
+                    Буду рад общению.
+                </p>
+            </div>
+
             <form action="/feedback" method="post">
                 {% csrf_token %}
                 <table>
-                {{ contact_form.as_table }}
+                    {{ contact_form.as_table }}
                 </table>
                 <input type="submit" value="Отправить" class="btn btn-primary"/>
 
-                {% if feed_success %}
-                <div class="alert alert-success" role="alert">{{feed_success}}</div>
-                {% endif %}
-
             </form>
+            <br>
+            {% if feed_success %}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{feed_success}}
+            </div>
+            {% else %}
+            {% if feed_error %}
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{feed_danger}}
+            </div>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
 

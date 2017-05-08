@@ -163,7 +163,7 @@ def main(request):
         d['cd'] = ''
         d['label_type'] = 'default'
 
-    return render_to_response(pages[index] + '.html', d)
+    return render(request, pages[index] + '.html', d)
 
 
 def cv(request):
@@ -175,7 +175,7 @@ def cv(request):
     d['cv_skills'] = skill_list()
     d['cv_age'] = get_string_age(1974, 2, 6)
 
-    return render_to_response(pages[index] + '.html', d)
+    return render(request, pages[index] + '.html', d)
 
 
 def projects(request):
@@ -249,7 +249,7 @@ def projects(request):
 
     d['projects_data'] = my_project_structure
 
-    return render_to_response(pages[index] + '.html', d)
+    return render(request, pages[index] + '.html', d)
 
 
 def hobbies(request):
@@ -280,7 +280,7 @@ def hobbies(request):
     d['debug_value'] = model_index
     d['model'] = model
 
-    return render_to_response(pages[index] + '.html', d)
+    return render(request, pages[index] + '.html', d)
 
 
 def contacts(request):
@@ -292,7 +292,7 @@ def contacts(request):
     form = MyContactForm()
     d['contact_form'] = form
 
-    return render_to_response(pages[index] + '.html', d)
+    return render(request, pages[index] + '.html', d)
 
 
 def feeadback(request):
@@ -304,6 +304,20 @@ def feeadback(request):
     form = MyContactForm()
     d['contact_form'] = form
 
-    d['feed_success'] = 'fwefw'
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = MyContactForm(request.POST)
 
-    return render_to_response(pages[index] + '.html', d)
+        # check whether it's valid:
+        if form.is_valid():
+            sender = form.cleaned_data['sender']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            d['feed_success'] = ' '.join([sender, subject, message])
+        else:
+            d['feed_error'] = 'К сожаленью сообщение не удалось отправить. Данные формы заполнены некорректно.'
+    else:
+        d['feed_error'] = 'К сожаленью сообщение не удалось отправить.'
+
+    return render(request, pages[index] + '.html', d)

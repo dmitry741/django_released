@@ -47,7 +47,7 @@ html, body {
 }
 
 .contact_block {
-    width: 460px;
+    width: 800px;
     float: left;
     display: block;
     margin-left: 0px;
@@ -59,7 +59,7 @@ html, body {
 .container .main_con {
     margin-left: 0%;
     min-width: 800px;
-    min-height: 600px;
+    min-height: 700px;
 }
 
 .container .main_hb {
