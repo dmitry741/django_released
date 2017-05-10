@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95fe66ba-8fe1-4d22-8720-a435d8a807ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/first_app_django/settings.py" afterPath="$PROJECT_DIR$/first_app_django/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/style.css" afterPath="$PROJECT_DIR$/static/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1987">
-              <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+            <state relative-caret-position="490">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,11 +62,19 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="137" column="27" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="39" />
-              <folding>
-                <marker date="1494406310772" expanded="false" signature="10998:11004" ph="—" />
-              </folding>
+            <state relative-caret-position="-12">
+              <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hobbies.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,9 +135,10 @@
       <find>caption_hobby_block</find>
       <find>One more for good</find>
       <find>Home</find>
-      <find>main_pr</find>
       <find>Технологи</find>
       <find>host</find>
+      <find>main_pr</find>
+      <find>context_template_container</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,8 +188,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="197" />
-    <option name="y" value="59" />
+    <option name="x" value="241" />
+    <option name="y" value="65" />
     <option name="width" value="1533" />
     <option name="height" value="1045" />
   </component>
@@ -523,7 +533,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="197" y="59" width="1533" height="1045" extended-state="0" />
+    <frame x="241" y="65" width="1533" height="1045" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20896506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -829,27 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/projectstructure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="27" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="39" />
-          <folding>
-            <marker date="1494406310772" expanded="false" signature="10998:11004" ph="—" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,10 +902,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1987">
-          <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+        <state relative-caret-position="490">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -148,4 +148,26 @@ margin-left: 30px;
     .container .main {
     height: 1200px;
     }
+
+    .container .main_pr {
+    height: 6100px;
+    min-height: 3600px;
+    }
+ }
+
+@media screen and (max-width: 1200px) {
+    .image_template_container {
+    width: 90%;
+    float: none;
+
+    padding-left: 1%;
+    padding-top: 0%;
+
+    min-height: 480px;
+    }
+
+    .container .main_hb {
+    height: 1400px;
+    min-height: 1300px;
+    }
 }
