@@ -1,5 +1,6 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 import datetime
+from django.core.mail import send_mail
 from mainapp.hobbystructure import get_model, get_path_to_static, get_nav_hobby
 from mainapp.sessioncontrol import MySession
 from mainapp.projectstructure import MyProjectStructure, Carusel
@@ -304,6 +305,8 @@ def feeadback(request):
     form = MyContactForm()
     d['contact_form'] = form
 
+    error_message = 'К сожаленью сообщение не удалось отправить.'
+
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = MyContactForm(request.POST)
@@ -314,10 +317,18 @@ def feeadback(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-            d['feed_success'] = ' '.join([sender, subject, message])
+            recipients = ['dmitrypavlov74@gmail.com']
+            recipients.append(sender)
+
+            try:
+                send_mail(subject, message, sender, recipients)
+                d['feed_success'] = ' '.join([sender, subject, message])
+            except Exception:
+                d['feed_error'] = error_message
+
         else:
-            d['feed_error'] = 'К сожаленью сообщение не удалось отправить. Данные формы заполнены некорректно.'
+            d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'
     else:
-        d['feed_error'] = 'К сожаленью сообщение не удалось отправить.'
+        d['feed_error'] = error_message
 
     return render(request, pages[index] + '.html', d)
