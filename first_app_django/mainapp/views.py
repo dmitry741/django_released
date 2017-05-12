@@ -193,8 +193,9 @@ def projects(request):
     active = 'item active'
     class_name = 'first-slide'
     alt = 'First slide'
+    short_link = '#gl'
 
-    carusel1 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+    carusel1 = Carusel(caption, text, button_text, button_link, active, class_name, alt, short_link)
 
     # 2
     caption = 'Расчетная программа АО Ридан'
@@ -205,8 +206,9 @@ def projects(request):
     active = 'item'
     class_name = 'second-slide'
     alt = 'Second slide'
+    short_link = '#rp'
 
-    carusel2 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+    carusel2 = Carusel(caption, text, button_text, button_link, active, class_name, alt, short_link)
 
     # 3
     caption = 'SusaninLab: поиск кратчайших маршрутов'
@@ -217,8 +219,9 @@ def projects(request):
     active = 'item'
     class_name = 'third-slide'
     alt = 'Third slide'
+    short_link = '#sl'
 
-    carusel3 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+    carusel3 = Carusel(caption, text, button_text, button_link, active, class_name, alt, short_link)
 
     # 4
     caption = 'Сайт-визитка'
@@ -229,8 +232,9 @@ def projects(request):
     active = 'item'
     class_name = 'fourth-slide'
     alt = 'Fourth slide'
+    short_link = '#ps'
 
-    carusel4 = Carusel(caption, text, button_text, button_link, active, class_name, alt)
+    carusel4 = Carusel(caption, text, button_text, button_link, active, class_name, alt, short_link)
 
     my_project_structure = MyProjectStructure()
     my_project_structure.carusel.append(carusel1)

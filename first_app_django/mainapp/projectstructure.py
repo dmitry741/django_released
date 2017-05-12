@@ -11,12 +11,13 @@ class BaseProject:
 
 class Carusel(BaseProject):
 
-    def __init__(self, caption, text, button_text, button_link, active, class_name, alt):
+    def __init__(self, caption, text, button_text, button_link, active, class_name, alt, short_link):
         super().__init__(caption, button_text, button_link)
         self.text = text
         self.active = active
         self.class_name = class_name
         self.alt = alt
+        self.short_link = short_link
 
 
 class ProjectPage(BaseProject):
