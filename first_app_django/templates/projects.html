@@ -40,44 +40,57 @@
 
         <!-- Carousel
             ================================================== -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
+        <div class="carusel_container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
 
-                {% for indicator in projects_data.indicators %}
-                <li data-target="#myCarousel" data-slide-to="{{indicator.0}}" class="{{indicator.1}}"></li>
-                {% endfor %}
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                {% for carusel in projects_data.carusel %}
-                <div class="{{carusel.active}}">
-                    <img class="{{carusel.class_name}}" src='{% static "images/slide1.png" %}' alt="{{carusel.alt}}">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h3>{{carusel}}</h3>
-                            <p>{{carusel.text}}</p>
-                            <p>
-                                <a class="btn btn-primary" href="{{carusel.button_link}}" role="button">{{carusel.button_text}}</a>
-                            </p>
+                    {% for indicator in projects_data.indicators %}
+                    <li data-target="#myCarousel" data-slide-to="{{indicator.0}}" class="{{indicator.1}}"></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    {% for carusel in projects_data.carusel %}
+                    <div class="{{carusel.active}}">
+                        <img class="{{carusel.class_name}}" src='{% static "images/slide1.png" %}'
+                             alt="{{carusel.alt}}">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>{{carusel}}</h3>
+                                <p>{{carusel.text}}</p>
+                                <p>
+                                    <a class="btn btn-primary" href="{{carusel.button_link}}" role="button">{{carusel.button_text}}</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div><!-- /.carousel -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div><!-- /.carousel -->
+        </div>
+
+        <div>
+            <ol class="breadcrumb">
+                <li><a href="#">Игра Жизнь</a></li>
+                <li><a href="#">Расчетная программа АО Ридан</a></li>
+                <li><a href="#">SusaninLab</a></li>
+                <li><a href="#">Сайт-визитка</a></li>
+            </ol>
+        </div>
 
         <div class="page-header">
             <h2>Мои ИТ-проекты</h2>
             <p class="lead">
-                Здесь представлены мои ИТ-проекты написанные в разное время, в период увлечения различными технологиями
+                Здесь представлены мои ИТ-проекты написанные в разное время, в период увлечения различными
+                технологиями
                 и идеями. Вместе с описанием проекта я расскажу и о том, какой стек технологий использовался при его
                 создании. Если у вас возникнут какие либо вопросы, вы можете <a href="/contacts">написать мне</a>.
                 Буду рад любому общению.
@@ -163,7 +176,8 @@
                     при заданном режиме.
                 </p>
                 <p>
-                    <i><u>Расчет на кондесацию</u></i>.&nbsp;Разновидность стандартного расчета, где в качестве греющей среды
+                    <i><u>Расчет на кондесацию</u></i>.&nbsp;Разновидность стандартного расчета, где в качестве греющей
+                    среды
                     выступает пар, который проходя по теплообменнику конденсируется и выходит в виде жидкости.
                     Принципиальным моментом данного типа расчета является фазовый переход греющей среды.
                 </p>
@@ -286,7 +300,8 @@
                     страничка <a href="/hobbies">Увлечения</a> выполнена на одном единственном шаблоне, который
                     заполняется в соответствии выбором пользователя. На страничке <a href="/contacts">Контакты</a>
                     используется очень эффектная технология Django forms, которая делает работу с формами
-                    очень удобной и понятной. Верстка основых компонентов страничек выполнена с помощью библиотеки Bootstrap.
+                    очень удобной и понятной. Верстка основых компонентов страничек выполнена с помощью библиотеки
+                    Bootstrap.
                 </p>
                 <p><b>Стэк технологий.</b>
                 <h4>

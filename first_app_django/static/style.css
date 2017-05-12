@@ -40,6 +40,10 @@ html, body {
     min-width: 300px;
 }
 
+.carusel_container {
+    display: block;
+}
+
 .container .main {
     margin-left: 5%;
     min-width: 600px;
@@ -175,5 +179,11 @@ margin-left: 30px;
     .container .main_hb {
     height: 1200px;
     min-height: 800px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .carusel_container {
+        display: none;
     }
 }
