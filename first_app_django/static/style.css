@@ -44,6 +44,10 @@ html, body {
     display: block;
 }
 
+.carusel_small_container {
+    display: none;
+}
+
 .container .main {
     margin-left: 5%;
     min-width: 600px;
@@ -150,40 +154,49 @@ margin-left: 30px;
     }
 
     .container .main {
-    height: 1200px;
+        height: 1200px;
     }
 
     .container .main_pr {
-    height: 6100px;
-    min-height: 3600px;
+        height: 6100px;
+        min-height: 3600px;
     }
  }
 
 @media screen and (max-width: 1200px) {
     .image_template_container {
-    width: 100%;
-    float: none;
+        width: 100%;
+        float: none;
 
-    padding-left: 0%;
-    padding-top: 0%;
+        padding-left: 0%;
+        padding-top: 0%;
 
-    min-height: 480px;
+        min-height: 480px;
     }
 
     .context_template_container {
-    padding-left: 30px;
-    padding-right: 30px;
-    min-height: 300px;
+        padding-left: 30px;
+        padding-right: 30px;
+        min-height: 300px;
     }
 
     .container .main_hb {
-    height: 1200px;
-    min-height: 800px;
+        height: 1200px;
+        min-height: 800px;
+    }
+
+      .container .main_pr {
+        height: 3600px;
+        min-height: 3000px;
     }
 }
 
 @media screen and (max-width: 1300px) {
     .carusel_container {
         display: none;
+    }
+
+    .carusel_small_container {
+        display: block;
     }
 }
