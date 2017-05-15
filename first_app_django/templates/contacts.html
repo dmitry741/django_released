@@ -40,15 +40,14 @@
         <div class="contact_block">
             <div class="page-header">
                 <h3>Контактная информация</h3>
-                <p>
-                    Чтобы написать сообщение воспользуйтесь формой ниже. Буду рад общению.
-                </p>
+                <p>Нижний Новгород, Канавинский район (метро Канавинская).</p>
+                <p>Чтобы написать сообщение воспользуйтесь формой ниже. Буду рад общению.</p>
             </div>
 
             <form action="/feedback" method="post">
                 {% csrf_token %}
                 <table>
-                    {{ contact_form.as_table }}
+                    {{contact_form.as_table}}
                 </table>
                 <input type="submit" value="Отправить" class="btn btn-primary"/>
 
