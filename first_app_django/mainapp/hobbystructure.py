@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class MyHobbyStructure:
     def __init__(self, caption):
         self.name = caption

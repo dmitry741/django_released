@@ -41,7 +41,10 @@
             <div class="page-header">
                 <h3>Контактная информация</h3>
                 <p><b>Нижний Новгород</b>, Канавинский район (метро Канавинская).</p>
-                <p>Чтобы написать сообщение воспользуйтесь формой ниже. Буду рад общению.</p>
+                <img src='{% static "images/email.png" %}' alt="Sorry, can't load email.">
+                <br>
+                <br>
+                <p>Или воспользуйтесь формой ниже. Буду рад общению.</p>
             </div>
 
             <form action="/feedback" method="post">
@@ -50,7 +53,6 @@
                     {{contact_form.as_table}}
                 </table>
                 <input type="submit" value="Отправить" class="btn btn-primary"/>
-
             </form>
             <br>
             {% if feed_success %}
