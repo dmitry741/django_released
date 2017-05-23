@@ -323,7 +323,7 @@ def feeadback(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-            recipients = ['dmitrypavlov74@gmail.com']
+            recipients = ['dmitrypavlov74@gmail.com', 'dmitry@pavlovnn.ru']
 
             try:
                 send_mail(subject, message, sender, recipients)
