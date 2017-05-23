@@ -122,10 +122,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-EMAIL_HOST = 'smtp.danfoss.net'
+EMAIL_HOST = 'smtp.locum.ru'
 EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'dmitry@pavlovnn.ru'
+EMAIL_HOST_PASSWORD = 'dmitry74'
 
-# EMAIL_USE_TLS = True
+
+# EMAIL_USE_TLS = False
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'dmitrypavlov74@gmail.com'

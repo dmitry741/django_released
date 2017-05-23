@@ -324,13 +324,12 @@ def feeadback(request):
             message = form.cleaned_data['message']
 
             recipients = ['dmitrypavlov74@gmail.com']
-            recipients.append(sender)
 
             try:
                 send_mail(subject, message, sender, recipients)
-                d['feed_success'] = ' '.join([sender, subject, message])
+                d['feed_success'] = 'Ваше сообщение было успешно отправлено.'
             except Exception:
-                d['feed_error'] = error_message
+                d['feed_error'] = error_message + ' Попробуйте отправить сообщение чуть позже.'
 
         else:
             d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'

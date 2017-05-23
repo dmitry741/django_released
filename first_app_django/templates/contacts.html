@@ -41,10 +41,10 @@
             <div class="page-header">
                 <h3>Контактная информация</h3>
                 <p><b>Нижний Новгород</b>, Канавинский район (метро Канавинская).</p>
-                <img src='{% static "images/email.png" %}' alt="Sorry, can't load email.">
+                <img src='{% static "images/email_collaboration.png" %}' alt="Sorry, can't load email.">
                 <br>
                 <br>
-                <p>Или воспользуйтесь формой ниже. Буду рад общению.</p>
+                <p>Также можно воспользоваться формой ниже. Буду рад общению.</p>
             </div>
 
             <form action="/feedback" method="post">
@@ -68,7 +68,7 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                {{feed_danger}}
+                {{feed_error}}
             </div>
             {% endif %}
             {% endif %}
