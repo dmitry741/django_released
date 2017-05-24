@@ -333,7 +333,5 @@ def feeadback(request):
 
         else:
             d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'
-    else:
-        d['feed_error'] = error_message
 
     return render(request, pages[index] + '.html', d)
