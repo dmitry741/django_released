@@ -41,7 +41,18 @@
             <div class="page-header">
                 <h3>Контактная информация</h3>
                 <p><b>Нижний Новгород</b>, Канавинский район (метро Канавинская).</p>
-                <img src='{% static "images/email_collaboration.png" %}' alt="Sorry, can't load email.">
+
+                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample"
+                   aria-expanded="false" aria-controls="collapseExample">
+                    Показать Email
+                </a>
+                <br>
+                <br>
+
+                <div class="collapse" id="collapseExample">
+                    <img src='{% static "images/email_collaboration.png" %}' alt="Sorry, can't load email.">
+                </div>
+
                 <br>
                 <br>
                 <p>Также можно воспользоваться формой ниже. Буду рад общению.</p>
