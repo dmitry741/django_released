@@ -335,3 +335,25 @@ def feeadback(request):
             d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'
 
     return render(request, pages[index] + '.html', d)
+
+
+def newmain(request):
+    index = 0
+    pages = get_mainmenu_links()
+
+    d = get_common_dict(index)
+    d['cur_time'] = get_string_cur_date()
+
+    cel = Celebrates()
+    cur_date = datetime.datetime.now()
+
+    cd = cel.get_item([cur_date.day, cur_date.month])
+
+    if cd:
+        d['cd'] = '. ' + cd.text
+        d['label_type'] = 'danger'
+    else:
+        d['cd'] = ''
+        d['label_type'] = 'default'
+
+    return render(request, 'new.html', d)
