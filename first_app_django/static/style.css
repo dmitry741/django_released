@@ -134,7 +134,7 @@ html, body {
     background-color: grey;
     width: 80%;
     margin: -100px auto 0;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .newcontainer {
@@ -146,6 +146,15 @@ html, body {
 
 .footer_copy {
     margin-left: 5%;
+    color: lightgrey;
+}
+
+.footer_contacts {
+    margin-left: 5%;
+    color: lightgrey;
+}
+
+.footer_contacts a {
     color: lightgrey;
 }
 
