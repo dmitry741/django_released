@@ -57,10 +57,12 @@
             </div>
 
             <form action="/feedback" method="post">
-                {% csrf_token %}
-                <table>
-                    {{contact_form.as_table}}
-                </table>
+                <div class="form-group">
+                    {% csrf_token %}
+                    <table>
+                        {{contact_form.as_table}}
+                    </table>
+                </div>
                 <input type="submit" value="Отправить" class="btn btn-primary"/>
             </form>
             <br>

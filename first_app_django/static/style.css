@@ -83,7 +83,7 @@ html, body {
     margin-right: 0;
     margin-top: 1%;
 
-    min-height: 3300px;
+    min-height: 3400px;
 }
 
 .container .main_pr img {
@@ -138,7 +138,7 @@ html, body {
 }
 
 .newcontainer {
-    padding-top: 60px;
+    margin-bootom: 60px;
 }
 
 .newfooter {
