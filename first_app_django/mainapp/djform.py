@@ -4,6 +4,7 @@ from django import forms
 
 class MyContactForm(forms.Form):
 
+    user = forms.CharField(label='Имя', max_length=50)
     sender = forms.EmailField(label='Ваш email')
     subject = forms.CharField(label='Тема', max_length=100)
     message = forms.CharField(label='Сообщение', widget=forms.Textarea)

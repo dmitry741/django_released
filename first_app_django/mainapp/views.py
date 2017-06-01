@@ -319,14 +319,16 @@ def feeadback(request):
 
         # check whether it's valid:
         if form.is_valid():
+            user = form.cleaned_data['user']
             sender = form.cleaned_data['sender']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
+            body = user + ' написал сообщение:\n\n' + message
 
             recipients = ['dmitrypavlov74@gmail.com', 'dmitry@pavlovnn.ru']
 
             try:
-                send_mail(subject, message, sender, recipients)
+                send_mail(subject, body, sender, recipients)
                 d['feed_success'] = 'Ваше сообщение было успешно отправлено.'
             except Exception:
                 d['feed_error'] = error_message + ' Попробуйте отправить сообщение чуть позже.'
