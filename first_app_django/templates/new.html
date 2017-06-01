@@ -22,40 +22,48 @@
 
 <body>
 
+<h2>Test page</h2>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src='{% static "bootstrap/js/bootstrap.min.js" %}'></script>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse">
-      <div class="newcontainer">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-             <li><a href="#contact">Dfgegerg</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Моя визитка
+</button>
 
-    <!-- Begin page content -->
-    <div class="newcontainer">
-      <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Визитка</h4>
       </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+      <div class="modal-body">
+          <h3>Павлов Дмитрий Геннадьевич</h3>
+          <h4>Нижний Новгород, АО Ридан</h4>
+          <h4>Начальник отдела инженерно-программного обеспечения.</h4>
+          <h4>Персональный сайт: www.pavlovnn.ru</h4>
+          <h4>Email: dmitrypavlov74@gmail.com</h4>
+
+          <hr class="featurette-divider">
+
+          <h3>Pavlov Dmitry</h3>
+          <h4>Nizhniy Novgorod, JSC Ridan</h4>
+          <h4>Head of Engineering Software Development</h4>
+          <h4>Personal site: www.pavlovnn.ru</h4>
+          <h4>Email: dmitrypavlov74@gmail.com</h4>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
+  </div>
+</div>
 
 </body>
 </html>
