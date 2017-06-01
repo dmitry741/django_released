@@ -323,7 +323,7 @@ def feeadback(request):
             sender = form.cleaned_data['sender']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            body = user + ' написал сообщение:\n\n' + message
+            body = '{} wrote: {}'.format(user, message)
 
             recipients = ['dmitrypavlov74@gmail.com', 'dmitry@pavlovnn.ru']
 
