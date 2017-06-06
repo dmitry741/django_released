@@ -162,6 +162,12 @@ html, body {
 margin-left: 30px;
 }
 
+.image_hobby_container {
+    display: block;
+    padding: 10px;
+    float: left;
+}
+
 @media screen and (max-width: 1000px) {
     .block {
         float: none;
@@ -176,6 +182,11 @@ margin-left: 30px;
     .container .main_pr {
         height: 5100px;
         min-height: 3600px;
+    }
+
+    .container .main_hb {
+        height: 1400px;
+        min-height: 800px;
     }
  }
 
@@ -207,7 +218,7 @@ margin-left: 30px;
     }
 
     .container .main_hb {
-        height: 1200px;
+        height: 1300px;
         min-height: 800px;
     }
 

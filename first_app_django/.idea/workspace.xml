@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95fe66ba-8fe1-4d22-8720-a435d8a807ab" name="Default" comment="" />
+    <list default="true" id="95fe66ba-8fe1-4d22-8720-a435d8a807ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/style.css" afterPath="$PROJECT_DIR$/static/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/hobbies.html" afterPath="$PROJECT_DIR$/templates/hobbies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects.html" afterPath="$PROJECT_DIR$/templates/projects.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,51 +24,21 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
+            <state relative-caret-position="526">
+              <caret line="167" column="16" lean-forward="true" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="djform.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/djform.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cv.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cv.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" column="119" lean-forward="false" selection-start-line="106" selection-start-column="119" selection-end-line="106" selection-end-column="119" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="114" column="89" lean-forward="false" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
+            <state relative-caret-position="255">
+              <caret line="155" column="77" lean-forward="true" selection-start-line="154" selection-start-column="16" selection-end-line="155" selection-end-column="77" />
               <folding>
-                <element signature="e#11662#11669#0" expanded="true" />
+                <element signature="e#11641#11648#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/contacts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="47" lean-forward="false" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -77,10 +53,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="hobbystructure.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainapp/hobbystructure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
+            <state relative-caret-position="653">
               <caret line="60" column="82" lean-forward="false" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
               <folding>
                 <element signature="e#1688#1695#0" expanded="true" />
@@ -89,12 +75,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hobbies.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hobbies.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="364">
+              <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+              <folding>
+                <element signature="e#2078#2084#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,6 +123,7 @@
       <find>container-fluid</find>
       <find>footer_copy</find>
       <find>padd</find>
+      <find>main_hb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,9 +154,6 @@
         <option value="$PROJECT_DIR$/templates/cv.html" />
         <option value="$PROJECT_DIR$/templates/cv.html" />
         <option value="$PROJECT_DIR$/templates/contacts.html" />
-        <option value="$PROJECT_DIR$/static/style.css" />
-        <option value="$PROJECT_DIR$/templates/hobbies.html" />
-        <option value="$PROJECT_DIR$/templates/hobbies.html" />
         <option value="$PROJECT_DIR$/mainapp/djform.py" />
         <option value="$PROJECT_DIR$/first_app_django/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -175,6 +161,9 @@
         <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/templates/new.html" />
         <option value="$PROJECT_DIR$/templates/projects.html" />
+        <option value="$PROJECT_DIR$/static/style.css" />
+        <option value="$PROJECT_DIR$/templates/hobbies.html" />
+        <option value="$PROJECT_DIR$/templates/hobbies.html" />
       </list>
     </option>
   </component>
@@ -185,8 +174,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
-    <option name="y" value="79" />
+    <option name="x" value="210" />
+    <option name="y" value="106" />
     <option name="width" value="1624" />
     <option name="height" value="1011" />
   </component>
@@ -230,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -301,7 +291,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,7 +501,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="79" width="1624" height="1011" extended-state="0" />
+    <frame x="210" y="106" width="1624" height="1011" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18781094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -793,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/hobbystructure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/projectstructure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -821,46 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="119" lean-forward="false" selection-start-line="106" selection-start-column="119" selection-end-line="106" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contacts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="47" lean-forward="false" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/djform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -875,6 +817,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="106" column="119" lean-forward="false" selection-start-line="106" selection-start-column="119" selection-end-line="106" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/djform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="62" column="47" lean-forward="false" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="60" column="82" lean-forward="false" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
+          <folding>
+            <element signature="e#1688#1695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4216">
@@ -883,22 +859,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new.html">
+    <entry file="file://$PROJECT_DIR$/mainapp/hobbystructure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="82" lean-forward="false" selection-start-line="60" selection-start-column="82" selection-end-line="60" selection-end-column="82" />
-          <folding>
-            <element signature="e#1688#1695#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="114" column="89" lean-forward="false" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
+        <state relative-caret-position="255">
+          <caret line="155" column="77" lean-forward="true" selection-start-line="154" selection-start-column="16" selection-end-line="155" selection-end-column="77" />
           <folding>
-            <element signature="e#11662#11669#0" expanded="true" />
+            <element signature="e#11641#11648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="167" column="16" lean-forward="true" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hobbies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+          <folding>
+            <element signature="e#2078#2084#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -46,22 +46,13 @@
             {% endfor %}
         </ol>
 
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <b>Модель {{model.name}}, {{model.short_desc}}</b>
-            </div>
+        <hr class="featurette-divider">
 
-            <div class="image_template_container">
-                <div class="row">
-                    <div class="col-xs-6 col-md-8">
-                        <div class="thumbnail">
-                            <img src='{{model.main_image_src}}' alt="{{model.name}}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="context_template_container">
-                <h4>Описание</h4>
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h3 class="featurette-heading"><a name="rp"></a>{{model.name}}
+                    <small>&nbsp;{{model.short_desc}}.</small>
+                </h3>
                 {% for s in model.desc %}
                 <p>{{s}}</p>
                 {% endfor %}
@@ -69,14 +60,25 @@
                 <a class="btn btn-default" href="{{model.button_link}}" target="_blank" role="button">
                     {{model.button_name}}
                 </a>
+                <br>
+                <div class="clr_block_text"></div>
+                <br>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+                     alt="500x500"
+                     src='{{model.main_image_src}}'
+                     data-holder-rendered="true">
             </div>
         </div>
 
+        <hr class="featurette-divider">
+
         <div class="row">
             {% for s in model.small_images %}
-            <div class="col-xs-6 col-md-1">
-                <a href="{{s.item2}}" class="thumbnail">
-                    <img src='{{s.item1}}' alt="small photo">
+            <div class="image_hobby_container">
+                <a href="{{s.item2}}">
+                    <img src='{{s.item1}}' alt="small photo" width="80px" class="img-rounded">
                 </a>
             </div>
             {% endfor %}
