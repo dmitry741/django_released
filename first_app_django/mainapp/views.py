@@ -140,9 +140,9 @@ def get_common_dict(index):
     small_caption[0] = None
 
     d = {'page_title': page_title,
-         'menu_list': menu_list,
-         'small_caption': small_caption[index],
-         'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
+        'menu_list': menu_list,
+        'small_caption': small_caption[index],
+        'cur_year': datetime.datetime.strftime(datetime.datetime.now(), "%Y")}
 
     return d
 
