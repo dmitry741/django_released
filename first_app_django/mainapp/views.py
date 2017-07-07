@@ -20,7 +20,7 @@ def get_mainmenu_links():
 def skill_list():
     return ('C#', 'C++', 'Python', 'VB.NET', 'Perl', 'Windows API', 'COM', 'ActiveX', 'GDI+',
             'OpenGL', 'ASP.NET', 'Django', 'HTML', 'CSS', 'Bootstrap', 'Multi-threading', 'MFC', 'ATL', 'STL', 'Boost',
-            'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'MS SQL', 'MySql')
+            'NAnt', 'NUnit', 'TFS', 'Git', 'Scrum', 'TDD', 'MS SQL', 'MySql')
 
 
 class CelebrateDay:
