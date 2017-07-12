@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class MyHobbyStructure:
     def __init__(self, caption):
         self.name = caption
@@ -26,14 +27,14 @@ class StringTemplate:
 
 
 def get_model_captions():
-    return ['Су-24', 'Су-37']
+    return ['Су-24', 'Су-37', 'Миг-31']
 
 
 def get_nav_hobby():
     list_names = get_model_captions()
     st_list = []
 
-    for x in range(2):
+    for x in range(3):
         st = StringTemplate(list_names[x], '/hobbies/?model=' + str(x))
         st_list.append(st)
 
@@ -44,10 +45,13 @@ def get_path_to_static(index):
 
     if index == 0:
         path = '/static/images/hobbies/su24/'
-    else:
+    elif index == 1:
         path = '/static/images/hobbies/su37/'
+    else:
+        path = '/static/images/hobbies/mig31/'
 
     return path
+
 
 def get_model(index):
 
@@ -82,6 +86,18 @@ def get_model(index):
                       пятого поколения.''']
 
         model.button_link = 'https://ru.wikipedia.org/wiki/%D0%A1%D1%83-37'
+    else:
+        model.short_desc = 'Истребитель-перехватчик дальнего радиуса действия'
+        p1 = 'Машина была разработана в начале 80-х годов на базе истребителя Миг-25'\
+             ', но до сих пор является лучшим в мире перехватчиком дальнего действия.'
+        p2 = 'Миг-31 имеет экипаж 2 человека и предназначен в первую очередь для уничтожения крылатых ракет.'
+        p3 = 'Анализ открытых военных программ ведущих стран мира позволяет говорить о том, что на сегодня'\
+             'в мире нет и в ближайшие 10–15 лет не будет авиационного комплекса, сопоставимого с этим '\
+             'самолетом по скорости, скороподъемности, практическому потолку и другим летно-техническим '\
+             'характеристикам, а также по эффективности в заданном интервале его боевого применения.'
+
+        model.desc = [p1, p2, p3]
+        model.button_link = 'https://ru.wikipedia.org/wiki/МиГ-31'
 
     path = get_path_to_static(index)
     model.main_image_src = path + '1.jpg'

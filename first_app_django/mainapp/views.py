@@ -278,7 +278,7 @@ def hobbies(request):
 
         hp = request.GET.get('model')
 
-        if hp is not None and hp in [str(x) for x in range(2)] :
+        if hp is not None and hp in [str(x) for x in range(3)]:
             MySession.set_hobby_index(request, int(hp))
 
     model_index = MySession.get_hobby_index(request)
