@@ -34,7 +34,7 @@ def get_nav_hobby():
     list_names = get_model_captions()
     st_list = []
 
-    for x in range(3):
+    for x in range(len(list_names)):
         st = StringTemplate(list_names[x], '/hobbies/?model=' + str(x))
         st_list.append(st)
 
