@@ -302,7 +302,7 @@ def contacts(request):
     return render(request, pages[index] + '.html', d)
 
 
-def feeadback(request):
+def feedback(request):
     index = 4
     pages = get_mainmenu_links()
     d = get_common_dict(index)
@@ -334,6 +334,7 @@ def feeadback(request):
                 d['feed_error'] = error_message + ' Попробуйте отправить сообщение чуть позже.'
 
         else:
+            d['contact_form'] = form
             d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'
 
     return render(request, pages[index] + '.html', d)
