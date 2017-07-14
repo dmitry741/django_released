@@ -321,21 +321,21 @@ def feedback(request):
         if form.is_valid():
             user = form.cleaned_data['user']
             sender = form.cleaned_data['sender']
-            subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             body = ' '.join([user, 'wrote:', message])
 
             recipients = ['dmitrypavlov74@gmail.com', 'dmitry@pavlovnn.ru']
 
             try:
-                send_mail(subject, body, sender, recipients)
+                send_mail('feedback', body, sender, recipients)
                 d['feed_success'] = 'Ваше сообщение было успешно отправлено.'
             except Exception:
-                d['feed_error'] = error_message + ' Попробуйте отправить сообщение чуть позже.'
+                d['feed_error'] = 'К сожаленью сообщение не удалось отправить. ' \
+                                  'Повторите попытку чуть позже.'
 
         else:
             d['contact_form'] = form
-            d['feed_error'] = error_message + ' Данные формы заполнены некорректно.'
+            d['feed_error'] = 'Данные формы заполнены некорректно.'
 
     return render(request, pages[index] + '.html', d)
 
