@@ -43,7 +43,7 @@
             <br>
             <h4>Дмитрий Павлов</h4>
             <div class="col-md-7">
-                <img src='{% static "images/contact.jpg" %}' alt="contact photo" width="80%">
+                <img class="img-rounded" src='{% static "images/contact.jpg" %}' alt="contact photo" width="80%">
                 <br>
                 <br>
                 <address>
@@ -59,12 +59,10 @@
                 <p>Напишите мне, буду рад сотрудничеству:</p>
                 <br>
                 <form action="/feedback" method="post">
-                    <div class="form-group">
-                        {% csrf_token %}
-                        <table>
-                            {{contact_form.as_table}}
-                        </table>
-                    </div>
+                    {% csrf_token %}
+                    <table>
+                        {{contact_form.as_table}}
+                    </table>
                     <input type="submit" value="Отправить" class="btn btn-success"/>
                 </form>
                 <br>
