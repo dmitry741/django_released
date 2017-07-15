@@ -60,12 +60,9 @@
                 <br>
                 <form class='form-horizontal' action="/feedback" method="post">
                     {% csrf_token %}
-                    <div class="form-group">
-                        {% csrf_token %}
-                        <table>
-                            {{contact_form.as_table}}
-                        </table>
-                    </div>
+                    <table>
+                        {{contact_form.as_table}}
+                    </table>
                     <input type="submit" value="Отправить" class="btn btn-success"/>
                 </form>
                 <br>
