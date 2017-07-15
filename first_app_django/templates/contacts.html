@@ -36,57 +36,59 @@
         </div>
         {% include 'inc/inc_main_menu.html' %}
     </div>
+
     <div class="main_con">
-        <div class="contact_block">
-            <div class="page-header">
-                <h3>Контактная информация</h3>
-                <p><b>Нижний Новгород</b>, Канавинский район (метро Канавинская).</p>
-
-                <a class="btn btn-default btn-sm" role="button" data-toggle="collapse" href="#collapseExample"
-                   aria-expanded="false" aria-controls="collapseExample">
-                    Показать Email
-                </a>
-                <br>
-
-                <div class="collapse" id="collapseExample">
-                    <img src='{% static "images/email_collaboration.png" %}' alt="Sorry, can't load email.">
-                </div>
-                <br>
-                <br>
-                <p>Чтобы написать сообщение можно воспользоваться формой ниже. Буду рад общению.</p>
-            </div>
-
-            <form action="/feedback" method="post">
-                <div class="form-group">
-                    {% csrf_token %}
-                    <table>
-                        {{contact_form.as_table}}
-                    </table>
-                </div>
-                <input type="submit" value="Отправить" class="btn btn-success"/>
-            </form>
+        <div class="container-fluid">
+            <h3 class="text-uppercase">Контакты</h3>
             <br>
+            <h4>Дмитрий Павлов</h4>
+            <div class="col-md-7">
+                <img src='{% static "images/contact.jpg" %}' alt="contact photo" width="80%">
+                <br>
+                <br>
+                <address>
+                    <strong>Россия</strong><br>
+                    Нижний Новгород<br>
+                    Канавинский район<br>
+                    Метро: Канавинская<br>
+                    <img src='{% static "images/email.png" %}' alt="email">
+                </address>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <p>Напишите мне, буду рад сотрудничеству:</p>
+                <br>
+                <form action="/feedback" method="post">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <table>
+                            {{contact_form.as_table}}
+                        </table>
+                    </div>
+                    <input type="submit" value="Отправить" class="btn btn-success"/>
+                </form>
+                <br>
 
-            {% if feed_success %}
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                {{feed_success}}
+                {% if feed_success %}
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{feed_success}}
+                </div>
+                {% else %}
+                {% if feed_error %}
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{feed_error}}
+                </div>
+                {% endif %}
+                {% endif %}
             </div>
-            {% else %}
-            {% if feed_error %}
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                {{feed_error}}
-            </div>
-            {% endif %}
-            {% endif %}
         </div>
     </div>
-
 </div>
 {% include 'inc/inc_common_footer.html' %}
 </body>

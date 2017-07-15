@@ -328,7 +328,7 @@ def feedback(request):
 
             try:
                 send_mail('feedback', body, sender, recipients)
-                d['feed_success'] = 'Ваше сообщение было успешно отправлено.'
+                d['feed_success'] = 'Сообщение было успешно отправлено.'
             except Exception:
                 d['feed_error'] = 'К сожаленью сообщение не удалось отправить. ' \
                                   'Повторите попытку чуть позже.'
